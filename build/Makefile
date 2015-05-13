@@ -42,7 +42,7 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/noah/senior-project/build
+CMAKE_SOURCE_DIR = /home/noah/senior-project
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/noah/senior-project/build
@@ -210,389 +210,389 @@ home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.s:
 	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.s
 .PHONY : home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.s
 
-home/noah/senior-project/source/Camera.o: home/noah/senior-project/source/Camera.cpp.o
-.PHONY : home/noah/senior-project/source/Camera.o
+source/Camera.o: source/Camera.cpp.o
+.PHONY : source/Camera.o
 
 # target to build an object file
-home/noah/senior-project/source/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o
-.PHONY : home/noah/senior-project/source/Camera.cpp.o
+source/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Camera.cpp.o
+.PHONY : source/Camera.cpp.o
 
-home/noah/senior-project/source/Camera.i: home/noah/senior-project/source/Camera.cpp.i
-.PHONY : home/noah/senior-project/source/Camera.i
+source/Camera.i: source/Camera.cpp.i
+.PHONY : source/Camera.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.i
-.PHONY : home/noah/senior-project/source/Camera.cpp.i
+source/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Camera.cpp.i
+.PHONY : source/Camera.cpp.i
 
-home/noah/senior-project/source/Camera.s: home/noah/senior-project/source/Camera.cpp.s
-.PHONY : home/noah/senior-project/source/Camera.s
+source/Camera.s: source/Camera.cpp.s
+.PHONY : source/Camera.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.s
-.PHONY : home/noah/senior-project/source/Camera.cpp.s
+source/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Camera.cpp.s
+.PHONY : source/Camera.cpp.s
 
-home/noah/senior-project/source/CollisionBox.o: home/noah/senior-project/source/CollisionBox.cpp.o
-.PHONY : home/noah/senior-project/source/CollisionBox.o
+source/CollisionBox.o: source/CollisionBox.cpp.o
+.PHONY : source/CollisionBox.o
 
 # target to build an object file
-home/noah/senior-project/source/CollisionBox.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o
-.PHONY : home/noah/senior-project/source/CollisionBox.cpp.o
+source/CollisionBox.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/CollisionBox.cpp.o
+.PHONY : source/CollisionBox.cpp.o
 
-home/noah/senior-project/source/CollisionBox.i: home/noah/senior-project/source/CollisionBox.cpp.i
-.PHONY : home/noah/senior-project/source/CollisionBox.i
+source/CollisionBox.i: source/CollisionBox.cpp.i
+.PHONY : source/CollisionBox.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/CollisionBox.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.i
-.PHONY : home/noah/senior-project/source/CollisionBox.cpp.i
+source/CollisionBox.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/CollisionBox.cpp.i
+.PHONY : source/CollisionBox.cpp.i
 
-home/noah/senior-project/source/CollisionBox.s: home/noah/senior-project/source/CollisionBox.cpp.s
-.PHONY : home/noah/senior-project/source/CollisionBox.s
+source/CollisionBox.s: source/CollisionBox.cpp.s
+.PHONY : source/CollisionBox.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/CollisionBox.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.s
-.PHONY : home/noah/senior-project/source/CollisionBox.cpp.s
+source/CollisionBox.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/CollisionBox.cpp.s
+.PHONY : source/CollisionBox.cpp.s
 
-home/noah/senior-project/source/GLSL.o: home/noah/senior-project/source/GLSL.cpp.o
-.PHONY : home/noah/senior-project/source/GLSL.o
+source/GLSL.o: source/GLSL.cpp.o
+.PHONY : source/GLSL.o
 
 # target to build an object file
-home/noah/senior-project/source/GLSL.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o
-.PHONY : home/noah/senior-project/source/GLSL.cpp.o
+source/GLSL.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/GLSL.cpp.o
+.PHONY : source/GLSL.cpp.o
 
-home/noah/senior-project/source/GLSL.i: home/noah/senior-project/source/GLSL.cpp.i
-.PHONY : home/noah/senior-project/source/GLSL.i
+source/GLSL.i: source/GLSL.cpp.i
+.PHONY : source/GLSL.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/GLSL.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.i
-.PHONY : home/noah/senior-project/source/GLSL.cpp.i
+source/GLSL.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/GLSL.cpp.i
+.PHONY : source/GLSL.cpp.i
 
-home/noah/senior-project/source/GLSL.s: home/noah/senior-project/source/GLSL.cpp.s
-.PHONY : home/noah/senior-project/source/GLSL.s
+source/GLSL.s: source/GLSL.cpp.s
+.PHONY : source/GLSL.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/GLSL.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.s
-.PHONY : home/noah/senior-project/source/GLSL.cpp.s
+source/GLSL.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/GLSL.cpp.s
+.PHONY : source/GLSL.cpp.s
 
-home/noah/senior-project/source/Image.o: home/noah/senior-project/source/Image.cpp.o
-.PHONY : home/noah/senior-project/source/Image.o
+source/Image.o: source/Image.cpp.o
+.PHONY : source/Image.o
 
 # target to build an object file
-home/noah/senior-project/source/Image.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o
-.PHONY : home/noah/senior-project/source/Image.cpp.o
+source/Image.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Image.cpp.o
+.PHONY : source/Image.cpp.o
 
-home/noah/senior-project/source/Image.i: home/noah/senior-project/source/Image.cpp.i
-.PHONY : home/noah/senior-project/source/Image.i
+source/Image.i: source/Image.cpp.i
+.PHONY : source/Image.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Image.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.i
-.PHONY : home/noah/senior-project/source/Image.cpp.i
+source/Image.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Image.cpp.i
+.PHONY : source/Image.cpp.i
 
-home/noah/senior-project/source/Image.s: home/noah/senior-project/source/Image.cpp.s
-.PHONY : home/noah/senior-project/source/Image.s
+source/Image.s: source/Image.cpp.s
+.PHONY : source/Image.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Image.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.s
-.PHONY : home/noah/senior-project/source/Image.cpp.s
+source/Image.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Image.cpp.s
+.PHONY : source/Image.cpp.s
 
-home/noah/senior-project/source/Light.o: home/noah/senior-project/source/Light.cpp.o
-.PHONY : home/noah/senior-project/source/Light.o
+source/Light.o: source/Light.cpp.o
+.PHONY : source/Light.o
 
 # target to build an object file
-home/noah/senior-project/source/Light.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o
-.PHONY : home/noah/senior-project/source/Light.cpp.o
+source/Light.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Light.cpp.o
+.PHONY : source/Light.cpp.o
 
-home/noah/senior-project/source/Light.i: home/noah/senior-project/source/Light.cpp.i
-.PHONY : home/noah/senior-project/source/Light.i
+source/Light.i: source/Light.cpp.i
+.PHONY : source/Light.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Light.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.i
-.PHONY : home/noah/senior-project/source/Light.cpp.i
+source/Light.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Light.cpp.i
+.PHONY : source/Light.cpp.i
 
-home/noah/senior-project/source/Light.s: home/noah/senior-project/source/Light.cpp.s
-.PHONY : home/noah/senior-project/source/Light.s
+source/Light.s: source/Light.cpp.s
+.PHONY : source/Light.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Light.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.s
-.PHONY : home/noah/senior-project/source/Light.cpp.s
+source/Light.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Light.cpp.s
+.PHONY : source/Light.cpp.s
 
-home/noah/senior-project/source/MatrixStack.o: home/noah/senior-project/source/MatrixStack.cpp.o
-.PHONY : home/noah/senior-project/source/MatrixStack.o
+source/MatrixStack.o: source/MatrixStack.cpp.o
+.PHONY : source/MatrixStack.o
 
 # target to build an object file
-home/noah/senior-project/source/MatrixStack.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o
-.PHONY : home/noah/senior-project/source/MatrixStack.cpp.o
+source/MatrixStack.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/MatrixStack.cpp.o
+.PHONY : source/MatrixStack.cpp.o
 
-home/noah/senior-project/source/MatrixStack.i: home/noah/senior-project/source/MatrixStack.cpp.i
-.PHONY : home/noah/senior-project/source/MatrixStack.i
+source/MatrixStack.i: source/MatrixStack.cpp.i
+.PHONY : source/MatrixStack.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/MatrixStack.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.i
-.PHONY : home/noah/senior-project/source/MatrixStack.cpp.i
+source/MatrixStack.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/MatrixStack.cpp.i
+.PHONY : source/MatrixStack.cpp.i
 
-home/noah/senior-project/source/MatrixStack.s: home/noah/senior-project/source/MatrixStack.cpp.s
-.PHONY : home/noah/senior-project/source/MatrixStack.s
+source/MatrixStack.s: source/MatrixStack.cpp.s
+.PHONY : source/MatrixStack.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/MatrixStack.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.s
-.PHONY : home/noah/senior-project/source/MatrixStack.cpp.s
+source/MatrixStack.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/MatrixStack.cpp.s
+.PHONY : source/MatrixStack.cpp.s
 
-home/noah/senior-project/source/Program.o: home/noah/senior-project/source/Program.cpp.o
-.PHONY : home/noah/senior-project/source/Program.o
+source/Program.o: source/Program.cpp.o
+.PHONY : source/Program.o
 
 # target to build an object file
-home/noah/senior-project/source/Program.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o
-.PHONY : home/noah/senior-project/source/Program.cpp.o
+source/Program.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Program.cpp.o
+.PHONY : source/Program.cpp.o
 
-home/noah/senior-project/source/Program.i: home/noah/senior-project/source/Program.cpp.i
-.PHONY : home/noah/senior-project/source/Program.i
+source/Program.i: source/Program.cpp.i
+.PHONY : source/Program.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Program.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.i
-.PHONY : home/noah/senior-project/source/Program.cpp.i
+source/Program.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Program.cpp.i
+.PHONY : source/Program.cpp.i
 
-home/noah/senior-project/source/Program.s: home/noah/senior-project/source/Program.cpp.s
-.PHONY : home/noah/senior-project/source/Program.s
+source/Program.s: source/Program.cpp.s
+.PHONY : source/Program.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Program.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.s
-.PHONY : home/noah/senior-project/source/Program.cpp.s
+source/Program.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Program.cpp.s
+.PHONY : source/Program.cpp.s
 
-home/noah/senior-project/source/Scene.o: home/noah/senior-project/source/Scene.cpp.o
-.PHONY : home/noah/senior-project/source/Scene.o
+source/Scene.o: source/Scene.cpp.o
+.PHONY : source/Scene.o
 
 # target to build an object file
-home/noah/senior-project/source/Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o
-.PHONY : home/noah/senior-project/source/Scene.cpp.o
+source/Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Scene.cpp.o
+.PHONY : source/Scene.cpp.o
 
-home/noah/senior-project/source/Scene.i: home/noah/senior-project/source/Scene.cpp.i
-.PHONY : home/noah/senior-project/source/Scene.i
+source/Scene.i: source/Scene.cpp.i
+.PHONY : source/Scene.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.i
-.PHONY : home/noah/senior-project/source/Scene.cpp.i
+source/Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Scene.cpp.i
+.PHONY : source/Scene.cpp.i
 
-home/noah/senior-project/source/Scene.s: home/noah/senior-project/source/Scene.cpp.s
-.PHONY : home/noah/senior-project/source/Scene.s
+source/Scene.s: source/Scene.cpp.s
+.PHONY : source/Scene.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.s
-.PHONY : home/noah/senior-project/source/Scene.cpp.s
+source/Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Scene.cpp.s
+.PHONY : source/Scene.cpp.s
 
-home/noah/senior-project/source/Shape.o: home/noah/senior-project/source/Shape.cpp.o
-.PHONY : home/noah/senior-project/source/Shape.o
+source/Shape.o: source/Shape.cpp.o
+.PHONY : source/Shape.o
 
 # target to build an object file
-home/noah/senior-project/source/Shape.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o
-.PHONY : home/noah/senior-project/source/Shape.cpp.o
+source/Shape.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Shape.cpp.o
+.PHONY : source/Shape.cpp.o
 
-home/noah/senior-project/source/Shape.i: home/noah/senior-project/source/Shape.cpp.i
-.PHONY : home/noah/senior-project/source/Shape.i
+source/Shape.i: source/Shape.cpp.i
+.PHONY : source/Shape.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Shape.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.i
-.PHONY : home/noah/senior-project/source/Shape.cpp.i
+source/Shape.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Shape.cpp.i
+.PHONY : source/Shape.cpp.i
 
-home/noah/senior-project/source/Shape.s: home/noah/senior-project/source/Shape.cpp.s
-.PHONY : home/noah/senior-project/source/Shape.s
+source/Shape.s: source/Shape.cpp.s
+.PHONY : source/Shape.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Shape.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.s
-.PHONY : home/noah/senior-project/source/Shape.cpp.s
+source/Shape.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Shape.cpp.s
+.PHONY : source/Shape.cpp.s
 
-home/noah/senior-project/source/ShapeObj.o: home/noah/senior-project/source/ShapeObj.cpp.o
-.PHONY : home/noah/senior-project/source/ShapeObj.o
+source/ShapeObj.o: source/ShapeObj.cpp.o
+.PHONY : source/ShapeObj.o
 
 # target to build an object file
-home/noah/senior-project/source/ShapeObj.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o
-.PHONY : home/noah/senior-project/source/ShapeObj.cpp.o
+source/ShapeObj.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/ShapeObj.cpp.o
+.PHONY : source/ShapeObj.cpp.o
 
-home/noah/senior-project/source/ShapeObj.i: home/noah/senior-project/source/ShapeObj.cpp.i
-.PHONY : home/noah/senior-project/source/ShapeObj.i
+source/ShapeObj.i: source/ShapeObj.cpp.i
+.PHONY : source/ShapeObj.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/ShapeObj.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.i
-.PHONY : home/noah/senior-project/source/ShapeObj.cpp.i
+source/ShapeObj.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/ShapeObj.cpp.i
+.PHONY : source/ShapeObj.cpp.i
 
-home/noah/senior-project/source/ShapeObj.s: home/noah/senior-project/source/ShapeObj.cpp.s
-.PHONY : home/noah/senior-project/source/ShapeObj.s
+source/ShapeObj.s: source/ShapeObj.cpp.s
+.PHONY : source/ShapeObj.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/ShapeObj.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.s
-.PHONY : home/noah/senior-project/source/ShapeObj.cpp.s
+source/ShapeObj.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/ShapeObj.cpp.s
+.PHONY : source/ShapeObj.cpp.s
 
-home/noah/senior-project/source/Texture.o: home/noah/senior-project/source/Texture.cpp.o
-.PHONY : home/noah/senior-project/source/Texture.o
+source/Texture.o: source/Texture.cpp.o
+.PHONY : source/Texture.o
 
 # target to build an object file
-home/noah/senior-project/source/Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o
-.PHONY : home/noah/senior-project/source/Texture.cpp.o
+source/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Texture.cpp.o
+.PHONY : source/Texture.cpp.o
 
-home/noah/senior-project/source/Texture.i: home/noah/senior-project/source/Texture.cpp.i
-.PHONY : home/noah/senior-project/source/Texture.i
+source/Texture.i: source/Texture.cpp.i
+.PHONY : source/Texture.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.i
-.PHONY : home/noah/senior-project/source/Texture.cpp.i
+source/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Texture.cpp.i
+.PHONY : source/Texture.cpp.i
 
-home/noah/senior-project/source/Texture.s: home/noah/senior-project/source/Texture.cpp.s
-.PHONY : home/noah/senior-project/source/Texture.s
+source/Texture.s: source/Texture.cpp.s
+.PHONY : source/Texture.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.s
-.PHONY : home/noah/senior-project/source/Texture.cpp.s
+source/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Texture.cpp.s
+.PHONY : source/Texture.cpp.s
 
-home/noah/senior-project/source/Track.o: home/noah/senior-project/source/Track.cpp.o
-.PHONY : home/noah/senior-project/source/Track.o
+source/Track.o: source/Track.cpp.o
+.PHONY : source/Track.o
 
 # target to build an object file
-home/noah/senior-project/source/Track.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o
-.PHONY : home/noah/senior-project/source/Track.cpp.o
+source/Track.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Track.cpp.o
+.PHONY : source/Track.cpp.o
 
-home/noah/senior-project/source/Track.i: home/noah/senior-project/source/Track.cpp.i
-.PHONY : home/noah/senior-project/source/Track.i
+source/Track.i: source/Track.cpp.i
+.PHONY : source/Track.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Track.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.i
-.PHONY : home/noah/senior-project/source/Track.cpp.i
+source/Track.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Track.cpp.i
+.PHONY : source/Track.cpp.i
 
-home/noah/senior-project/source/Track.s: home/noah/senior-project/source/Track.cpp.s
-.PHONY : home/noah/senior-project/source/Track.s
+source/Track.s: source/Track.cpp.s
+.PHONY : source/Track.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Track.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.s
-.PHONY : home/noah/senior-project/source/Track.cpp.s
+source/Track.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Track.cpp.s
+.PHONY : source/Track.cpp.s
 
-home/noah/senior-project/source/Vehicle.o: home/noah/senior-project/source/Vehicle.cpp.o
-.PHONY : home/noah/senior-project/source/Vehicle.o
+source/Vehicle.o: source/Vehicle.cpp.o
+.PHONY : source/Vehicle.o
 
 # target to build an object file
-home/noah/senior-project/source/Vehicle.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o
-.PHONY : home/noah/senior-project/source/Vehicle.cpp.o
+source/Vehicle.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Vehicle.cpp.o
+.PHONY : source/Vehicle.cpp.o
 
-home/noah/senior-project/source/Vehicle.i: home/noah/senior-project/source/Vehicle.cpp.i
-.PHONY : home/noah/senior-project/source/Vehicle.i
+source/Vehicle.i: source/Vehicle.cpp.i
+.PHONY : source/Vehicle.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/Vehicle.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.i
-.PHONY : home/noah/senior-project/source/Vehicle.cpp.i
+source/Vehicle.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Vehicle.cpp.i
+.PHONY : source/Vehicle.cpp.i
 
-home/noah/senior-project/source/Vehicle.s: home/noah/senior-project/source/Vehicle.cpp.s
-.PHONY : home/noah/senior-project/source/Vehicle.s
+source/Vehicle.s: source/Vehicle.cpp.s
+.PHONY : source/Vehicle.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/Vehicle.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.s
-.PHONY : home/noah/senior-project/source/Vehicle.cpp.s
+source/Vehicle.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Vehicle.cpp.s
+.PHONY : source/Vehicle.cpp.s
 
-home/noah/senior-project/source/WorldObject.o: home/noah/senior-project/source/WorldObject.cpp.o
-.PHONY : home/noah/senior-project/source/WorldObject.o
+source/WorldObject.o: source/WorldObject.cpp.o
+.PHONY : source/WorldObject.o
 
 # target to build an object file
-home/noah/senior-project/source/WorldObject.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o
-.PHONY : home/noah/senior-project/source/WorldObject.cpp.o
+source/WorldObject.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/WorldObject.cpp.o
+.PHONY : source/WorldObject.cpp.o
 
-home/noah/senior-project/source/WorldObject.i: home/noah/senior-project/source/WorldObject.cpp.i
-.PHONY : home/noah/senior-project/source/WorldObject.i
+source/WorldObject.i: source/WorldObject.cpp.i
+.PHONY : source/WorldObject.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/WorldObject.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.i
-.PHONY : home/noah/senior-project/source/WorldObject.cpp.i
+source/WorldObject.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/WorldObject.cpp.i
+.PHONY : source/WorldObject.cpp.i
 
-home/noah/senior-project/source/WorldObject.s: home/noah/senior-project/source/WorldObject.cpp.s
-.PHONY : home/noah/senior-project/source/WorldObject.s
+source/WorldObject.s: source/WorldObject.cpp.s
+.PHONY : source/WorldObject.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/WorldObject.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.s
-.PHONY : home/noah/senior-project/source/WorldObject.cpp.s
+source/WorldObject.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/WorldObject.cpp.s
+.PHONY : source/WorldObject.cpp.s
 
-home/noah/senior-project/source/main.o: home/noah/senior-project/source/main.cpp.o
-.PHONY : home/noah/senior-project/source/main.o
+source/main.o: source/main.cpp.o
+.PHONY : source/main.o
 
 # target to build an object file
-home/noah/senior-project/source/main.cpp.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o
-.PHONY : home/noah/senior-project/source/main.cpp.o
+source/main.cpp.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/main.cpp.o
+.PHONY : source/main.cpp.o
 
-home/noah/senior-project/source/main.i: home/noah/senior-project/source/main.cpp.i
-.PHONY : home/noah/senior-project/source/main.i
+source/main.i: source/main.cpp.i
+.PHONY : source/main.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/main.cpp.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.i
-.PHONY : home/noah/senior-project/source/main.cpp.i
+source/main.cpp.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/main.cpp.i
+.PHONY : source/main.cpp.i
 
-home/noah/senior-project/source/main.s: home/noah/senior-project/source/main.cpp.s
-.PHONY : home/noah/senior-project/source/main.s
+source/main.s: source/main.cpp.s
+.PHONY : source/main.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/main.cpp.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.s
-.PHONY : home/noah/senior-project/source/main.cpp.s
+source/main.cpp.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/main.cpp.s
+.PHONY : source/main.cpp.s
 
-home/noah/senior-project/source/tiny_obj_loader.o: home/noah/senior-project/source/tiny_obj_loader.cc.o
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.o
+source/tiny_obj_loader.o: source/tiny_obj_loader.cc.o
+.PHONY : source/tiny_obj_loader.o
 
 # target to build an object file
-home/noah/senior-project/source/tiny_obj_loader.cc.o:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.cc.o
+source/tiny_obj_loader.cc.o:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o
+.PHONY : source/tiny_obj_loader.cc.o
 
-home/noah/senior-project/source/tiny_obj_loader.i: home/noah/senior-project/source/tiny_obj_loader.cc.i
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.i
+source/tiny_obj_loader.i: source/tiny_obj_loader.cc.i
+.PHONY : source/tiny_obj_loader.i
 
 # target to preprocess a source file
-home/noah/senior-project/source/tiny_obj_loader.cc.i:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.i
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.cc.i
+source/tiny_obj_loader.cc.i:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/tiny_obj_loader.cc.i
+.PHONY : source/tiny_obj_loader.cc.i
 
-home/noah/senior-project/source/tiny_obj_loader.s: home/noah/senior-project/source/tiny_obj_loader.cc.s
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.s
+source/tiny_obj_loader.s: source/tiny_obj_loader.cc.s
+.PHONY : source/tiny_obj_loader.s
 
 # target to generate assembly for a file
-home/noah/senior-project/source/tiny_obj_loader.cc.s:
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.s
-.PHONY : home/noah/senior-project/source/tiny_obj_loader.cc.s
+source/tiny_obj_loader.cc.s:
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/tiny_obj_loader.cc.s
+.PHONY : source/tiny_obj_loader.cc.s
 
 # Help Target
 help:
@@ -615,54 +615,54 @@ help:
 	@echo "... home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.o"
 	@echo "... home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.i"
 	@echo "... home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.s"
-	@echo "... home/noah/senior-project/source/Camera.o"
-	@echo "... home/noah/senior-project/source/Camera.i"
-	@echo "... home/noah/senior-project/source/Camera.s"
-	@echo "... home/noah/senior-project/source/CollisionBox.o"
-	@echo "... home/noah/senior-project/source/CollisionBox.i"
-	@echo "... home/noah/senior-project/source/CollisionBox.s"
-	@echo "... home/noah/senior-project/source/GLSL.o"
-	@echo "... home/noah/senior-project/source/GLSL.i"
-	@echo "... home/noah/senior-project/source/GLSL.s"
-	@echo "... home/noah/senior-project/source/Image.o"
-	@echo "... home/noah/senior-project/source/Image.i"
-	@echo "... home/noah/senior-project/source/Image.s"
-	@echo "... home/noah/senior-project/source/Light.o"
-	@echo "... home/noah/senior-project/source/Light.i"
-	@echo "... home/noah/senior-project/source/Light.s"
-	@echo "... home/noah/senior-project/source/MatrixStack.o"
-	@echo "... home/noah/senior-project/source/MatrixStack.i"
-	@echo "... home/noah/senior-project/source/MatrixStack.s"
-	@echo "... home/noah/senior-project/source/Program.o"
-	@echo "... home/noah/senior-project/source/Program.i"
-	@echo "... home/noah/senior-project/source/Program.s"
-	@echo "... home/noah/senior-project/source/Scene.o"
-	@echo "... home/noah/senior-project/source/Scene.i"
-	@echo "... home/noah/senior-project/source/Scene.s"
-	@echo "... home/noah/senior-project/source/Shape.o"
-	@echo "... home/noah/senior-project/source/Shape.i"
-	@echo "... home/noah/senior-project/source/Shape.s"
-	@echo "... home/noah/senior-project/source/ShapeObj.o"
-	@echo "... home/noah/senior-project/source/ShapeObj.i"
-	@echo "... home/noah/senior-project/source/ShapeObj.s"
-	@echo "... home/noah/senior-project/source/Texture.o"
-	@echo "... home/noah/senior-project/source/Texture.i"
-	@echo "... home/noah/senior-project/source/Texture.s"
-	@echo "... home/noah/senior-project/source/Track.o"
-	@echo "... home/noah/senior-project/source/Track.i"
-	@echo "... home/noah/senior-project/source/Track.s"
-	@echo "... home/noah/senior-project/source/Vehicle.o"
-	@echo "... home/noah/senior-project/source/Vehicle.i"
-	@echo "... home/noah/senior-project/source/Vehicle.s"
-	@echo "... home/noah/senior-project/source/WorldObject.o"
-	@echo "... home/noah/senior-project/source/WorldObject.i"
-	@echo "... home/noah/senior-project/source/WorldObject.s"
-	@echo "... home/noah/senior-project/source/main.o"
-	@echo "... home/noah/senior-project/source/main.i"
-	@echo "... home/noah/senior-project/source/main.s"
-	@echo "... home/noah/senior-project/source/tiny_obj_loader.o"
-	@echo "... home/noah/senior-project/source/tiny_obj_loader.i"
-	@echo "... home/noah/senior-project/source/tiny_obj_loader.s"
+	@echo "... source/Camera.o"
+	@echo "... source/Camera.i"
+	@echo "... source/Camera.s"
+	@echo "... source/CollisionBox.o"
+	@echo "... source/CollisionBox.i"
+	@echo "... source/CollisionBox.s"
+	@echo "... source/GLSL.o"
+	@echo "... source/GLSL.i"
+	@echo "... source/GLSL.s"
+	@echo "... source/Image.o"
+	@echo "... source/Image.i"
+	@echo "... source/Image.s"
+	@echo "... source/Light.o"
+	@echo "... source/Light.i"
+	@echo "... source/Light.s"
+	@echo "... source/MatrixStack.o"
+	@echo "... source/MatrixStack.i"
+	@echo "... source/MatrixStack.s"
+	@echo "... source/Program.o"
+	@echo "... source/Program.i"
+	@echo "... source/Program.s"
+	@echo "... source/Scene.o"
+	@echo "... source/Scene.i"
+	@echo "... source/Scene.s"
+	@echo "... source/Shape.o"
+	@echo "... source/Shape.i"
+	@echo "... source/Shape.s"
+	@echo "... source/ShapeObj.o"
+	@echo "... source/ShapeObj.i"
+	@echo "... source/ShapeObj.s"
+	@echo "... source/Texture.o"
+	@echo "... source/Texture.i"
+	@echo "... source/Texture.s"
+	@echo "... source/Track.o"
+	@echo "... source/Track.i"
+	@echo "... source/Track.s"
+	@echo "... source/Vehicle.o"
+	@echo "... source/Vehicle.i"
+	@echo "... source/Vehicle.s"
+	@echo "... source/WorldObject.o"
+	@echo "... source/WorldObject.i"
+	@echo "... source/WorldObject.s"
+	@echo "... source/main.o"
+	@echo "... source/main.i"
+	@echo "... source/main.s"
+	@echo "... source/tiny_obj_loader.o"
+	@echo "... source/tiny_obj_loader.i"
+	@echo "... source/tiny_obj_loader.s"
 .PHONY : help
 
 

@@ -15,6 +15,7 @@ Track::Track()
 
 Track::~Track()
 {
+	free(pqpshape);
 }
 
 void pushMeshPoint(std::vector<float> &mesh, Eigen::Vector3f &point) {
@@ -393,6 +394,29 @@ void Track::load(const char *filename) {
 	buildGeometry();
 }
 
+void Track::initPQP() {
+	pqpshape = new PQP_Model();
+	PQP_REAL p1[3],p2[3],p3[3];
+
+	std::vector<float> positions = collisionMesh.positions;
+	std::vector<unsigned int> indices = collisionMesh.indices;
+	int ntris = (int)indices.size();
+	pqpshape->BeginModel();
+	for (int i = 0; i < ntris; i += 3) {
+		p1[0] = (PQP_REAL)(positions[indices[i] * 3 + 0]);
+		p1[1] = (PQP_REAL)(positions[indices[i] * 3 + 1]);
+		p1[2] = (PQP_REAL)(positions[indices[i] * 3 + 2]);
+		p2[0] = (PQP_REAL)(positions[indices[i + 1] * 3 + 0]);
+		p2[1] = (PQP_REAL)(positions[indices[i + 1] * 3 + 1]);
+		p2[2] = (PQP_REAL)(positions[indices[i + 1] * 3 + 2]);
+		p3[0] = (PQP_REAL)(positions[indices[i + 2] * 3 + 0]);
+		p3[1] = (PQP_REAL)(positions[indices[i + 2] * 3 + 1]);
+		p3[2] = (PQP_REAL)(positions[indices[i + 2] * 3 + 2]);
+		pqpshape->AddTri(p1,p2,p3, i / 3);
+	}
+	pqpshape->EndModel();
+}
+
 // Initialize the geometry for the lower and upper meshes
 void Track::init() {
 	for (auto &mesh : topMeshes) {
@@ -404,6 +428,7 @@ void Track::init() {
 	initMesh(collisionMesh);
 	toptex.init();
 	bottomtex.init();
+	initPQP();
 }
 
 // OpenGL init handler

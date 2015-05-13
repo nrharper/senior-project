@@ -28,15 +28,15 @@ void WorldObject::initPQP() {
 	int ntris = (int)indices.size();
 	pqpshape->BeginModel();
 	for (int i = 0; i < ntris; i += 3) {
-		p1[0] = (PQP_REAL)(positions[indices[i] + 0] * scale(0));
-		p1[1] = (PQP_REAL)(positions[indices[i] + 1] * scale(1));
-		p1[2] = (PQP_REAL)(positions[indices[i] + 2] * scale(2));
-		p2[0] = (PQP_REAL)(positions[indices[i + 1] + 0] * scale(0));
-		p2[1] = (PQP_REAL)(positions[indices[i + 1] + 1] * scale(1));
-		p2[2] = (PQP_REAL)(positions[indices[i + 1] + 2] * scale(2));
-		p3[0] = (PQP_REAL)(positions[indices[i + 2] + 0] * scale(0));
-		p3[1] = (PQP_REAL)(positions[indices[i + 2] + 1] * scale(1));
-		p3[2] = (PQP_REAL)(positions[indices[i + 2] + 2] * scale(2));
+		p1[0] = (PQP_REAL)(positions[indices[i] * 3 + 0] * scale(0));
+		p1[1] = (PQP_REAL)(positions[indices[i] * 3 + 1] * scale(1));
+		p1[2] = (PQP_REAL)(positions[indices[i] * 3 + 2] * scale(2));
+		p2[0] = (PQP_REAL)(positions[indices[i + 1] * 3 + 0] * scale(0));
+		p2[1] = (PQP_REAL)(positions[indices[i + 1] * 3 + 1] * scale(1));
+		p2[2] = (PQP_REAL)(positions[indices[i + 1] * 3 + 2] * scale(2));
+		p3[0] = (PQP_REAL)(positions[indices[i + 2] * 3 + 0] * scale(0));
+		p3[1] = (PQP_REAL)(positions[indices[i + 2] * 3 + 1] * scale(1));
+		p3[2] = (PQP_REAL)(positions[indices[i + 2] * 3 + 2] * scale(2));
 		pqpshape->AddTri(p1,p2,p3, i / 3);
 	}
 	pqpshape->EndModel();

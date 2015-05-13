@@ -1,4 +1,4 @@
-# Install script for directory: /home/noah/senior-project/build
+# Install script for directory: /home/noah/senior-project
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -37,7 +37,8 @@ private:
 	Track track;
 	Vehicle vehicle;
 
-	void pqpCollide(WorldObject &wheel, WorldObject &wobj);
+	void pqpCollideWObj(WorldObject &wheel, WorldObject &wobj);
+	void pqpCollideTrack(WorldObject &wheel, PQP_Model *track);
 };
 
 #endif

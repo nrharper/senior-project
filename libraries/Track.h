@@ -10,11 +10,14 @@
 #include "GLSL.h"
 #include "Texture.h"
 #include "Light.h"
+#include "PQP.h"
 
 class Track {
 public:
 	virtual ~Track();
 	Track();
+
+	PQP_Model *pqpshape;
 
 	struct MeshSegment {
 		unsigned posBufID;
@@ -57,6 +60,8 @@ private:
 	std::vector<MeshSegment> topMeshes;
 	std::vector<MeshSegment> bottomMeshes;
 	MeshSegment collisionMesh;
+
+	void initPQP();
 };
 
 #endif

@@ -38,7 +38,7 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/noah/senior-project/build
+CMAKE_SOURCE_DIR = /home/noah/senior-project
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/noah/senior-project/build
@@ -52,373 +52,373 @@ include CMakeFiles/senior.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/senior.dir/flags.make
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o: /home/noah/senior-project/source/Track.cpp
+CMakeFiles/senior.dir/source/Track.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Track.cpp.o: ../source/Track.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o -c /home/noah/senior-project/source/Track.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Track.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Track.cpp.o -c /home/noah/senior-project/source/Track.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Track.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.i
+CMakeFiles/senior.dir/source/Track.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Track.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Track.cpp > CMakeFiles/senior.dir/source/Track.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Track.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.s
+CMakeFiles/senior.dir/source/Track.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Track.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Track.cpp -o CMakeFiles/senior.dir/source/Track.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.requires
+CMakeFiles/senior.dir/source/Track.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Track.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.provides
+CMakeFiles/senior.dir/source/Track.cpp.o.provides: CMakeFiles/senior.dir/source/Track.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Track.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Track.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o
+CMakeFiles/senior.dir/source/Track.cpp.o.provides.build: CMakeFiles/senior.dir/source/Track.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o: /home/noah/senior-project/source/WorldObject.cpp
+CMakeFiles/senior.dir/source/WorldObject.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/WorldObject.cpp.o: ../source/WorldObject.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o -c /home/noah/senior-project/source/WorldObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/WorldObject.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/WorldObject.cpp.o -c /home/noah/senior-project/source/WorldObject.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/WorldObject.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.i
+CMakeFiles/senior.dir/source/WorldObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/WorldObject.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/WorldObject.cpp > CMakeFiles/senior.dir/source/WorldObject.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/WorldObject.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.s
+CMakeFiles/senior.dir/source/WorldObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/WorldObject.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/WorldObject.cpp -o CMakeFiles/senior.dir/source/WorldObject.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.requires
+CMakeFiles/senior.dir/source/WorldObject.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/WorldObject.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.provides
+CMakeFiles/senior.dir/source/WorldObject.cpp.o.provides: CMakeFiles/senior.dir/source/WorldObject.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/WorldObject.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/WorldObject.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o
+CMakeFiles/senior.dir/source/WorldObject.cpp.o.provides.build: CMakeFiles/senior.dir/source/WorldObject.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o: /home/noah/senior-project/source/main.cpp
+CMakeFiles/senior.dir/source/main.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/main.cpp.o: ../source/main.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o -c /home/noah/senior-project/source/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/main.cpp.o -c /home/noah/senior-project/source/main.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/main.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.i
+CMakeFiles/senior.dir/source/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/main.cpp > CMakeFiles/senior.dir/source/main.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/main.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.s
+CMakeFiles/senior.dir/source/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/main.cpp -o CMakeFiles/senior.dir/source/main.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.requires
+CMakeFiles/senior.dir/source/main.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/main.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.provides
+CMakeFiles/senior.dir/source/main.cpp.o.provides: CMakeFiles/senior.dir/source/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/main.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/main.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o
+CMakeFiles/senior.dir/source/main.cpp.o.provides.build: CMakeFiles/senior.dir/source/main.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o: /home/noah/senior-project/source/Scene.cpp
+CMakeFiles/senior.dir/source/Scene.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Scene.cpp.o: ../source/Scene.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o -c /home/noah/senior-project/source/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Scene.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Scene.cpp.o -c /home/noah/senior-project/source/Scene.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Scene.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.i
+CMakeFiles/senior.dir/source/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Scene.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Scene.cpp > CMakeFiles/senior.dir/source/Scene.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Scene.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.s
+CMakeFiles/senior.dir/source/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Scene.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Scene.cpp -o CMakeFiles/senior.dir/source/Scene.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.requires
+CMakeFiles/senior.dir/source/Scene.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Scene.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.provides
+CMakeFiles/senior.dir/source/Scene.cpp.o.provides: CMakeFiles/senior.dir/source/Scene.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Scene.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Scene.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o
+CMakeFiles/senior.dir/source/Scene.cpp.o.provides.build: CMakeFiles/senior.dir/source/Scene.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o: /home/noah/senior-project/source/Light.cpp
+CMakeFiles/senior.dir/source/Light.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Light.cpp.o: ../source/Light.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o -c /home/noah/senior-project/source/Light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Light.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Light.cpp.o -c /home/noah/senior-project/source/Light.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Light.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.i
+CMakeFiles/senior.dir/source/Light.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Light.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Light.cpp > CMakeFiles/senior.dir/source/Light.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Light.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.s
+CMakeFiles/senior.dir/source/Light.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Light.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Light.cpp -o CMakeFiles/senior.dir/source/Light.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.requires
+CMakeFiles/senior.dir/source/Light.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Light.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.provides
+CMakeFiles/senior.dir/source/Light.cpp.o.provides: CMakeFiles/senior.dir/source/Light.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Light.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Light.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o
+CMakeFiles/senior.dir/source/Light.cpp.o.provides.build: CMakeFiles/senior.dir/source/Light.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o: /home/noah/senior-project/source/Vehicle.cpp
+CMakeFiles/senior.dir/source/Vehicle.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Vehicle.cpp.o: ../source/Vehicle.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o -c /home/noah/senior-project/source/Vehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Vehicle.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Vehicle.cpp.o -c /home/noah/senior-project/source/Vehicle.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Vehicle.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.i
+CMakeFiles/senior.dir/source/Vehicle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Vehicle.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Vehicle.cpp > CMakeFiles/senior.dir/source/Vehicle.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Vehicle.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.s
+CMakeFiles/senior.dir/source/Vehicle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Vehicle.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Vehicle.cpp -o CMakeFiles/senior.dir/source/Vehicle.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.requires
+CMakeFiles/senior.dir/source/Vehicle.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Vehicle.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.provides
+CMakeFiles/senior.dir/source/Vehicle.cpp.o.provides: CMakeFiles/senior.dir/source/Vehicle.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Vehicle.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Vehicle.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o
+CMakeFiles/senior.dir/source/Vehicle.cpp.o.provides.build: CMakeFiles/senior.dir/source/Vehicle.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o: /home/noah/senior-project/source/ShapeObj.cpp
+CMakeFiles/senior.dir/source/ShapeObj.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/ShapeObj.cpp.o: ../source/ShapeObj.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o -c /home/noah/senior-project/source/ShapeObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/ShapeObj.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/ShapeObj.cpp.o -c /home/noah/senior-project/source/ShapeObj.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/ShapeObj.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.i
+CMakeFiles/senior.dir/source/ShapeObj.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/ShapeObj.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/ShapeObj.cpp > CMakeFiles/senior.dir/source/ShapeObj.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/ShapeObj.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.s
+CMakeFiles/senior.dir/source/ShapeObj.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/ShapeObj.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/ShapeObj.cpp -o CMakeFiles/senior.dir/source/ShapeObj.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.requires
+CMakeFiles/senior.dir/source/ShapeObj.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/ShapeObj.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.provides
+CMakeFiles/senior.dir/source/ShapeObj.cpp.o.provides: CMakeFiles/senior.dir/source/ShapeObj.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/ShapeObj.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/ShapeObj.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o
+CMakeFiles/senior.dir/source/ShapeObj.cpp.o.provides.build: CMakeFiles/senior.dir/source/ShapeObj.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o: /home/noah/senior-project/source/Texture.cpp
+CMakeFiles/senior.dir/source/Texture.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Texture.cpp.o: ../source/Texture.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o -c /home/noah/senior-project/source/Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Texture.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Texture.cpp.o -c /home/noah/senior-project/source/Texture.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Texture.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.i
+CMakeFiles/senior.dir/source/Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Texture.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Texture.cpp > CMakeFiles/senior.dir/source/Texture.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Texture.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.s
+CMakeFiles/senior.dir/source/Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Texture.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Texture.cpp -o CMakeFiles/senior.dir/source/Texture.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.requires
+CMakeFiles/senior.dir/source/Texture.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Texture.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.provides
+CMakeFiles/senior.dir/source/Texture.cpp.o.provides: CMakeFiles/senior.dir/source/Texture.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Texture.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Texture.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o
+CMakeFiles/senior.dir/source/Texture.cpp.o.provides.build: CMakeFiles/senior.dir/source/Texture.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o: /home/noah/senior-project/source/Image.cpp
+CMakeFiles/senior.dir/source/Image.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Image.cpp.o: ../source/Image.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o -c /home/noah/senior-project/source/Image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Image.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Image.cpp.o -c /home/noah/senior-project/source/Image.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Image.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.i
+CMakeFiles/senior.dir/source/Image.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Image.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Image.cpp > CMakeFiles/senior.dir/source/Image.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Image.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.s
+CMakeFiles/senior.dir/source/Image.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Image.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Image.cpp -o CMakeFiles/senior.dir/source/Image.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.requires
+CMakeFiles/senior.dir/source/Image.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Image.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.provides
+CMakeFiles/senior.dir/source/Image.cpp.o.provides: CMakeFiles/senior.dir/source/Image.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Image.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Image.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o
+CMakeFiles/senior.dir/source/Image.cpp.o.provides.build: CMakeFiles/senior.dir/source/Image.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o: /home/noah/senior-project/source/CollisionBox.cpp
+CMakeFiles/senior.dir/source/CollisionBox.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/CollisionBox.cpp.o: ../source/CollisionBox.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o -c /home/noah/senior-project/source/CollisionBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/CollisionBox.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/CollisionBox.cpp.o -c /home/noah/senior-project/source/CollisionBox.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/CollisionBox.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.i
+CMakeFiles/senior.dir/source/CollisionBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/CollisionBox.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/CollisionBox.cpp > CMakeFiles/senior.dir/source/CollisionBox.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/CollisionBox.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.s
+CMakeFiles/senior.dir/source/CollisionBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/CollisionBox.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/CollisionBox.cpp -o CMakeFiles/senior.dir/source/CollisionBox.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.requires
+CMakeFiles/senior.dir/source/CollisionBox.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/CollisionBox.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.provides
+CMakeFiles/senior.dir/source/CollisionBox.cpp.o.provides: CMakeFiles/senior.dir/source/CollisionBox.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/CollisionBox.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/CollisionBox.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o
+CMakeFiles/senior.dir/source/CollisionBox.cpp.o.provides.build: CMakeFiles/senior.dir/source/CollisionBox.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o: /home/noah/senior-project/source/Shape.cpp
+CMakeFiles/senior.dir/source/Shape.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Shape.cpp.o: ../source/Shape.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o -c /home/noah/senior-project/source/Shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Shape.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Shape.cpp.o -c /home/noah/senior-project/source/Shape.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Shape.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.i
+CMakeFiles/senior.dir/source/Shape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Shape.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Shape.cpp > CMakeFiles/senior.dir/source/Shape.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Shape.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.s
+CMakeFiles/senior.dir/source/Shape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Shape.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Shape.cpp -o CMakeFiles/senior.dir/source/Shape.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.requires
+CMakeFiles/senior.dir/source/Shape.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Shape.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.provides
+CMakeFiles/senior.dir/source/Shape.cpp.o.provides: CMakeFiles/senior.dir/source/Shape.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Shape.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Shape.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o
+CMakeFiles/senior.dir/source/Shape.cpp.o.provides.build: CMakeFiles/senior.dir/source/Shape.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o: /home/noah/senior-project/source/GLSL.cpp
+CMakeFiles/senior.dir/source/GLSL.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/GLSL.cpp.o: ../source/GLSL.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o -c /home/noah/senior-project/source/GLSL.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/GLSL.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/GLSL.cpp.o -c /home/noah/senior-project/source/GLSL.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/GLSL.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.i
+CMakeFiles/senior.dir/source/GLSL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/GLSL.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/GLSL.cpp > CMakeFiles/senior.dir/source/GLSL.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/GLSL.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.s
+CMakeFiles/senior.dir/source/GLSL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/GLSL.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/GLSL.cpp -o CMakeFiles/senior.dir/source/GLSL.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.requires
+CMakeFiles/senior.dir/source/GLSL.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/GLSL.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.provides
+CMakeFiles/senior.dir/source/GLSL.cpp.o.provides: CMakeFiles/senior.dir/source/GLSL.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/GLSL.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/GLSL.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o
+CMakeFiles/senior.dir/source/GLSL.cpp.o.provides.build: CMakeFiles/senior.dir/source/GLSL.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o: /home/noah/senior-project/source/Program.cpp
+CMakeFiles/senior.dir/source/Program.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Program.cpp.o: ../source/Program.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o -c /home/noah/senior-project/source/Program.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Program.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Program.cpp.o -c /home/noah/senior-project/source/Program.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Program.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.i
+CMakeFiles/senior.dir/source/Program.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Program.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Program.cpp > CMakeFiles/senior.dir/source/Program.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Program.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.s
+CMakeFiles/senior.dir/source/Program.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Program.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Program.cpp -o CMakeFiles/senior.dir/source/Program.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.requires
+CMakeFiles/senior.dir/source/Program.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Program.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.provides
+CMakeFiles/senior.dir/source/Program.cpp.o.provides: CMakeFiles/senior.dir/source/Program.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Program.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Program.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o
+CMakeFiles/senior.dir/source/Program.cpp.o.provides.build: CMakeFiles/senior.dir/source/Program.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o: /home/noah/senior-project/source/MatrixStack.cpp
+CMakeFiles/senior.dir/source/MatrixStack.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/MatrixStack.cpp.o: ../source/MatrixStack.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o -c /home/noah/senior-project/source/MatrixStack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/MatrixStack.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/MatrixStack.cpp.o -c /home/noah/senior-project/source/MatrixStack.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/MatrixStack.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.i
+CMakeFiles/senior.dir/source/MatrixStack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/MatrixStack.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/MatrixStack.cpp > CMakeFiles/senior.dir/source/MatrixStack.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/MatrixStack.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.s
+CMakeFiles/senior.dir/source/MatrixStack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/MatrixStack.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/MatrixStack.cpp -o CMakeFiles/senior.dir/source/MatrixStack.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.requires
+CMakeFiles/senior.dir/source/MatrixStack.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/MatrixStack.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.provides
+CMakeFiles/senior.dir/source/MatrixStack.cpp.o.provides: CMakeFiles/senior.dir/source/MatrixStack.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/MatrixStack.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/MatrixStack.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o
+CMakeFiles/senior.dir/source/MatrixStack.cpp.o.provides.build: CMakeFiles/senior.dir/source/MatrixStack.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o: /home/noah/senior-project/source/Camera.cpp
+CMakeFiles/senior.dir/source/Camera.cpp.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/Camera.cpp.o: ../source/Camera.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o -c /home/noah/senior-project/source/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/Camera.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/Camera.cpp.o -c /home/noah/senior-project/source/Camera.cpp
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Camera.cpp > CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.i
+CMakeFiles/senior.dir/source/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/Camera.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/Camera.cpp > CMakeFiles/senior.dir/source/Camera.cpp.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Camera.cpp -o CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.s
+CMakeFiles/senior.dir/source/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/Camera.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/Camera.cpp -o CMakeFiles/senior.dir/source/Camera.cpp.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.requires
+CMakeFiles/senior.dir/source/Camera.cpp.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/Camera.cpp.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.provides
+CMakeFiles/senior.dir/source/Camera.cpp.o.provides: CMakeFiles/senior.dir/source/Camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/Camera.cpp.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/Camera.cpp.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o
+CMakeFiles/senior.dir/source/Camera.cpp.o.provides.build: CMakeFiles/senior.dir/source/Camera.cpp.o
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o: CMakeFiles/senior.dir/flags.make
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o: /home/noah/senior-project/source/tiny_obj_loader.cc
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o: CMakeFiles/senior.dir/flags.make
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o: ../source/tiny_obj_loader.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/noah/senior-project/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o -c /home/noah/senior-project/source/tiny_obj_loader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o -c /home/noah/senior-project/source/tiny_obj_loader.cc
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/tiny_obj_loader.cc > CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.i
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/senior.dir/source/tiny_obj_loader.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/noah/senior-project/source/tiny_obj_loader.cc > CMakeFiles/senior.dir/source/tiny_obj_loader.cc.i
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/tiny_obj_loader.cc -o CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.s
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/senior.dir/source/tiny_obj_loader.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/noah/senior-project/source/tiny_obj_loader.cc -o CMakeFiles/senior.dir/source/tiny_obj_loader.cc.s
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.requires:
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.requires
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.requires:
+.PHONY : CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.requires
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.provides: CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.requires
-	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.provides.build
-.PHONY : CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.provides
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.provides: CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.requires
+	$(MAKE) -f CMakeFiles/senior.dir/build.make CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.provides.build
+.PHONY : CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.provides
 
-CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.provides.build: CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o
+CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.provides.build: CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o
 
 CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp.o: CMakeFiles/senior.dir/flags.make
 CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp.o: /home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp
@@ -514,22 +514,22 @@ CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/PQP.cpp.o.provides.bu
 
 # Object files for target senior
 senior_OBJECTS = \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o" \
-"CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o" \
+"CMakeFiles/senior.dir/source/Track.cpp.o" \
+"CMakeFiles/senior.dir/source/WorldObject.cpp.o" \
+"CMakeFiles/senior.dir/source/main.cpp.o" \
+"CMakeFiles/senior.dir/source/Scene.cpp.o" \
+"CMakeFiles/senior.dir/source/Light.cpp.o" \
+"CMakeFiles/senior.dir/source/Vehicle.cpp.o" \
+"CMakeFiles/senior.dir/source/ShapeObj.cpp.o" \
+"CMakeFiles/senior.dir/source/Texture.cpp.o" \
+"CMakeFiles/senior.dir/source/Image.cpp.o" \
+"CMakeFiles/senior.dir/source/CollisionBox.cpp.o" \
+"CMakeFiles/senior.dir/source/Shape.cpp.o" \
+"CMakeFiles/senior.dir/source/GLSL.cpp.o" \
+"CMakeFiles/senior.dir/source/Program.cpp.o" \
+"CMakeFiles/senior.dir/source/MatrixStack.cpp.o" \
+"CMakeFiles/senior.dir/source/Camera.cpp.o" \
+"CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o" \
 "CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp.o" \
 "CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/Build.cpp.o" \
 "CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.o" \
@@ -538,22 +538,22 @@ senior_OBJECTS = \
 # External object files for target senior
 senior_EXTERNAL_OBJECTS =
 
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o
-senior: CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o
+senior: CMakeFiles/senior.dir/source/Track.cpp.o
+senior: CMakeFiles/senior.dir/source/WorldObject.cpp.o
+senior: CMakeFiles/senior.dir/source/main.cpp.o
+senior: CMakeFiles/senior.dir/source/Scene.cpp.o
+senior: CMakeFiles/senior.dir/source/Light.cpp.o
+senior: CMakeFiles/senior.dir/source/Vehicle.cpp.o
+senior: CMakeFiles/senior.dir/source/ShapeObj.cpp.o
+senior: CMakeFiles/senior.dir/source/Texture.cpp.o
+senior: CMakeFiles/senior.dir/source/Image.cpp.o
+senior: CMakeFiles/senior.dir/source/CollisionBox.cpp.o
+senior: CMakeFiles/senior.dir/source/Shape.cpp.o
+senior: CMakeFiles/senior.dir/source/GLSL.cpp.o
+senior: CMakeFiles/senior.dir/source/Program.cpp.o
+senior: CMakeFiles/senior.dir/source/MatrixStack.cpp.o
+senior: CMakeFiles/senior.dir/source/Camera.cpp.o
+senior: CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o
 senior: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp.o
 senior: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/Build.cpp.o
 senior: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.o
@@ -576,22 +576,22 @@ senior: CMakeFiles/senior.dir/link.txt
 CMakeFiles/senior.dir/build: senior
 .PHONY : CMakeFiles/senior.dir/build
 
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Track.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/WorldObject.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/main.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Scene.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Light.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Vehicle.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/ShapeObj.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Texture.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Image.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/CollisionBox.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Shape.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/GLSL.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Program.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/MatrixStack.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/Camera.cpp.o.requires
-CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/senior-project/source/tiny_obj_loader.cc.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Track.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/WorldObject.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/main.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Scene.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Light.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Vehicle.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/ShapeObj.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Texture.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Image.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/CollisionBox.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Shape.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/GLSL.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Program.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/MatrixStack.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/Camera.cpp.o.requires
+CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/source/tiny_obj_loader.cc.o.requires
 CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/BV.cpp.o.requires
 CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/Build.cpp.o.requires
 CMakeFiles/senior.dir/requires: CMakeFiles/senior.dir/home/noah/Tools/pqp-1.3/PQP_v1.3/src/TriDist.cpp.o.requires
@@ -603,6 +603,6 @@ CMakeFiles/senior.dir/clean:
 .PHONY : CMakeFiles/senior.dir/clean
 
 CMakeFiles/senior.dir/depend:
-	cd /home/noah/senior-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/noah/senior-project/build /home/noah/senior-project/build /home/noah/senior-project/build /home/noah/senior-project/build /home/noah/senior-project/build/CMakeFiles/senior.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/noah/senior-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/noah/senior-project /home/noah/senior-project /home/noah/senior-project/build /home/noah/senior-project/build /home/noah/senior-project/build/CMakeFiles/senior.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/senior.dir/depend
 

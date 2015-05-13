@@ -1133,6 +1133,8 @@ Texture.h
 /home/noah/senior-project/libraries/Texture.h
 Light.h
 /home/noah/senior-project/libraries/Light.h
+PQP.h
+/home/noah/senior-project/libraries/PQP.h
 
 /home/noah/senior-project/libraries/Vehicle.h
 Eigen/Dense
@@ -1197,4 +1199,20 @@ sstream
 -
 PQP.h
 /home/noah/senior-project/source/PQP.h
+
+/home/noah/senior-project/source/Track.cpp
+../libraries/Track.h
+/home/noah/senior-project/libraries/Track.h
+Eigen/Geometry
+-
+string
+-
+iostream
+-
+fstream
+-
+sstream
+-
+cstdlib
+-
 

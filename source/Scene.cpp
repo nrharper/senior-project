@@ -47,6 +47,7 @@ void Scene::update(const bool *keys, const Eigen::Vector2f &mouse, float dt) {
 	checkCollisions();
 }
 
+// fills a PQP_REAL matrix with values from a float array matrix
 void setPQPRotate(float *raw, PQP_REAL R[3][3]) {
 	R[0][0] = raw[0];
 	R[0][1] = raw[1];
@@ -59,7 +60,8 @@ void setPQPRotate(float *raw, PQP_REAL R[3][3]) {
 	R[2][2] = raw[8];
 }
 
-void Scene::pqpCollide(WorldObject &wheel, WorldObject &wobj) {
+// tests 2 objects for collisions using pqp objects
+void Scene::pqpCollideWObj(WorldObject &wheel, WorldObject &wobj) {
 	PQP_REAL R1[3][3];
 	PQP_REAL *T1 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
 	PQP_REAL R2[3][3];
@@ -72,12 +74,6 @@ void Scene::pqpCollide(WorldObject &wheel, WorldObject &wobj) {
 	setPQPRotate(wobj.rotate.data(), R2);
 	T2 = (PQP_REAL *)(wobj.translate.data());
 
-//	printf("rotate: \n");
-//	printf("%f %f %f\n", (float)R1[0][0], (float)R1[0][1], (float)R1[0][2]);
-//	printf("%f %f %f\n", (float)R1[1][0], (float)R1[1][1], (float)R1[1][2]);
-//	printf("%f %f %f\n", (float)R1[2][0], (float)R1[2][1], (float)R1[2][2]);
-//	printf("translate: %f %f %f\n", (float)T1[0], (float)T1[1], (float)T1[2]);
-
 	PQP_CollideResult cres;
 	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
 					   R2, T2, wobj.pqpshape,
@@ -85,11 +81,33 @@ void Scene::pqpCollide(WorldObject &wheel, WorldObject &wobj) {
 	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
 }
 
+// tests collisions between an object and a track
+void Scene::pqpCollideTrack(WorldObject &wheel, PQP_Model *track) {
+	PQP_REAL R1[3][3];
+	PQP_REAL *T1 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
+	PQP_REAL R2[3][3] = {{(PQP_REAL)0.0f}};
+	R2[0][0] = (PQP_REAL)1.0f;
+	R2[1][1] = (PQP_REAL)1.0f;
+	R2[2][2] = (PQP_REAL)1.0f;
+	PQP_REAL T2[3] = {(PQP_REAL)0.0f};
+
+	setPQPRotate(wheel.rotate.data(), R1);
+	Eigen::Vector3f wp0 = wheel.translate + vehicle.getPosition();
+	T1 = (PQP_REAL *)(wp0.data());
+
+	PQP_CollideResult cres;
+	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
+					   R2, T2, track,
+		                  PQP_ALL_CONTACTS);
+	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
+}
+
 void Scene::checkCollisions() {
 	for (auto &w : vehicle.wheels) {
 		for (auto &wobj : objects) {
-			pqpCollide(w, wobj);
+			pqpCollideWObj(w, wobj);
 		}
+		pqpCollideTrack(w, track.pqpshape);
 	}
 }
 
