@@ -1,4 +1,4 @@
-3
+4
 ../materials/cube.obj ../materials/dirt.jpg 1
 0.0 -0.2 0.0
 400.0 0.2 400.0
@@ -50,3 +50,8 @@
 20.0 20.0 20.0
 0.0 0.0 0.0 0.0
 1 x y
+../materials/prism.obj ../materials/concrete.bmp 1
+0.0 0.0 0.0
+10.0 10.0 10.0
+0.0 0.0 0.0 0.0
+0 x y

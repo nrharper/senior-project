@@ -10,17 +10,22 @@
 #include "MatrixStack.h"
 #include "CollisionBox.h"
 #include "Shape.h"
+#include "Light.h"
 
 class Vehicle {
 public:
+
+	std::vector<WorldObject> wheels;
+	WorldObject chasis;
+
 	Vehicle();
 	virtual ~Vehicle();
 	void load();
 	void init();
 	void computeMomentsOfInertia();
-	void computeForces(const bool *keys);
+	void computeForces(const bool *keys, float dt);
 	void update(const bool *keys, const Eigen::Vector2f &mouse, const std::vector<CollisionBox> &boxes, float dt);
-	void draw(const bool *keys, MatrixStack &MV, Program *prog);
+	void draw(const bool *keys, MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
 	float &getYaw() { return yaw; }
 	float &getPitch() { return pitch; }
 	float &getVelocity() { return speed; }
@@ -47,10 +52,10 @@ private:
 	Eigen::Vector3f position;
 	Eigen::Vector3f velocity;
 
-	WorldObject wheel;
-	WorldObject chasis;
 	Shape chasis_shape;
 	Shape wheel_shape;
+	Texture ctex;
+	Texture wtex;
 };
 
 #endif

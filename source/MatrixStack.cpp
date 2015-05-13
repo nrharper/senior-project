@@ -117,11 +117,22 @@ void MatrixStack::perspective(float fovy, float aspect, float zNear, float zFar)
 //	top = glm::frustum(l, r, b, t, zNear, zFar);
 //}
 //
-//void MatrixStack::lookAt(const Eigen::Vector3f &eye, const Eigen::Vector3f &target, const Eigen::Vector3f &up)
-//{
-//	Eigen::Matrix4f &top = mstack.top();
-//	top = glm::lookAt(eye, target, up);
-//}
+void MatrixStack::lookAt(const Eigen::Vector3f &eye, const Eigen::Vector3f &target, const Eigen::Vector3f &up)
+{
+	Eigen::Matrix4f &top = mstack.top();
+	Eigen::Vector3f f = (target - eye).normalized();
+	Eigen::Vector3f u = up.normalized();
+	Eigen::Vector3f s = f.cross(u).normalized();
+	u = s.cross(f);
+
+	Eigen::Matrix4f res;
+	res << s(0), s(1), s(2), -s.dot(eye),
+			u(0), u(1), u(2), -u.dot(eye),
+			-f(0), -f(1), -f(2), f.dot(eye),
+			0.0f, 0.0f, 0.0f, 1.0f;
+
+	top = res;
+}
 
 const Eigen::Matrix4f &MatrixStack::topMatrix() const
 {

@@ -25,5 +25,6 @@
 #include <Eigen/Geometry>
 #include "Scene.h"
 #include "Track.h"
+#include "Light.h"
 
 using namespace std;

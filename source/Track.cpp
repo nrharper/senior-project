@@ -19,14 +19,14 @@ Track::~Track()
 
 void pushMeshPoint(std::vector<float> &mesh, Eigen::Vector3f &point) {
 	mesh.push_back(point(0));
-   mesh.push_back(point(1));
-   mesh.push_back(point(2));
+	mesh.push_back(point(1));
+	mesh.push_back(point(2));
 }
 
 void pushTriangleIndices(std::vector<unsigned int> &indices, int a, int b, int c) {
 	indices.push_back(a);
-   indices.push_back(b);
-   indices.push_back(c);
+	indices.push_back(b);
+	indices.push_back(c);
 }
 
 // Builds a spline curve and constructs the objects for it
@@ -66,14 +66,14 @@ void Track::buildGeometry() {
 
 		   Eigen::Vector4f uVec(1.0f, u, u*u, u*u*u);
 			Eigen::Vector4f uPrime(0.0f, 1.0f, 2.0f * u, 3.0f * u * u);
-			Eigen::Vector4f uPrimePrime(0.0f, 0.0f, 2.0f, 6.0f * u);
+			//Eigen::Vector4f uPrimePrime(0.0f, 0.0f, 2.0f, 6.0f * u);
 		   Eigen::Vector3f P = Gk * B * uVec;
 			if (P(1) < 0)
 				P(1) = 0;
 
 			Eigen::Vector3f tracknormal = Gnk * B * uVec;
 			Eigen::Vector3f pPrime = Gk * B * uPrime;
-			Eigen::Vector3f pPrimePrime = Gk * B * uPrimePrime;
+			//Eigen::Vector3f pPrimePrime = Gk * B * uPrimePrime;
 			Eigen::Vector3f tangent = pPrime / pPrime.norm();
 			tangent.normalize();
 			Eigen::Vector3f binormal = tracknormal.cross(tangent);
@@ -217,7 +217,7 @@ void Track::buildGeometry() {
 	}
 
 
-	// Set up the triangle indices for the upper mesh
+	// Set up the triangles for the upper mesh
 	for (auto &mesh : topMeshes) {
 		for (int i = 0; i < (int)mesh.positions.size() / 6 - 1; i++) {
 			//Top mesh triangles
@@ -226,7 +226,7 @@ void Track::buildGeometry() {
 		}
 	}
 
-	// Set up the triangle indices for the lower mesh
+	// Set up the triangles for the lower mesh
 	for (auto &mesh : bottomMeshes) {
 		for (int i = 0; i < (int)mesh.positions.size() / 18 - 1; i++) {
 			// Left side mesh triangles
@@ -243,6 +243,7 @@ void Track::buildGeometry() {
 		}
 	}
 
+	// Set up the triangles for the collision mesh
 	for (int i = 0; i < (int)collisionMesh.positions.size() / 12 - 1; i++) {
 		// Top mesh triangles 
 		pushTriangleIndices(collisionMesh.indices, i * 4, i * 4 + 5, i * 4 + 4);
@@ -388,8 +389,8 @@ void Track::load(const char *filename) {
 
 	toptex.setFilename("../materials/road.jpg");
 	bottomtex.setFilename("../materials/diffuse.bmp");
-   buildTable();
-   buildGeometry();
+	buildTable();
+	buildGeometry();
 }
 
 // Initialize the geometry for the lower and upper meshes
@@ -447,27 +448,55 @@ void Track::initMesh(MeshSegment &mesh) {
 }
 
 // Draws the track. Binds a seperate texture for lower and upper parts
-void Track::draw(MatrixStack &MV, Program *prog) {
+void Track::draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) {
+	MatrixStack lightP, lightMV; // light matrices
+	lightP.pushMatrix();
+	light.applyProjectionMatrix(&lightP);
+	lightMV.pushMatrix();
+	light.applyViewMatrix(&lightMV);
+	Eigen::Matrix4f lightMVP = lightP.topMatrix() * lightMV.topMatrix();
+
+	if (isShadowPass1) {
+		glUniformMatrix4fv(prog->getUniform("MVP"), 1, GL_FALSE, lightMVP.data());
+		for (auto &mesh : topMeshes) {
+			drawMesh(prog, mesh, isShadowPass1);
+		}
+		for (auto &mesh : bottomMeshes) {
+			drawMesh(prog, mesh, isShadowPass1);
+		}
+		//drawMesh(prog, collisionMesh, isShadowPass1);
+		return;
+	}
+
+	glUniformMatrix4fv(prog->getUniform("lightMVP"), 1, GL_FALSE, lightMVP.data());
    glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.topMatrix().data());
 	Eigen::Matrix3f T1 = Eigen::Matrix3f::Identity();
-	glUniformMatrix3fv(prog->getUniform("T1"), 1, GL_TRUE, T1.data());
+	glUniformMatrix3fv(prog->getUniform("Tscale"), 1, GL_TRUE, T1.data());
 
-	toptex.bind(prog->getUniform("texture"), 2);
+	toptex.bind(prog->getUniform("texture"), 1);
 	for (auto &mesh : topMeshes) {
-		drawMesh(prog, mesh);
+		drawMesh(prog, mesh, isShadowPass1);
 	}
-	toptex.unbind(2);
-	bottomtex.bind(prog->getUniform("texture"), 3);
+	toptex.unbind(1);
+	bottomtex.bind(prog->getUniform("texture"), 1);
 	for (auto &mesh : bottomMeshes) {
-		drawMesh(prog, mesh);
+		drawMesh(prog, mesh, isShadowPass1);
 	}
-	drawMesh(prog, collisionMesh);
-	bottomtex.unbind(3);
+	//drawMesh(prog, collisionMesh, isShadowPass1);
+	bottomtex.unbind(1);
+
+	lightMV.popMatrix();
+	lightP.popMatrix();
 }
 
 // OpenGL draw hander
-void Track::drawMesh(Program *prog, MeshSegment &mesh) {
-   int h_pos = prog->getAttribute("vertPos"), h_nor = prog->getAttribute("vertNor"), h_tex = prog->getAttribute("vertTex");
+void Track::drawMesh(Program *prog, MeshSegment &mesh, bool pass) {
+   int h_pos = prog->getAttribute("vertPos"), h_nor = -1, h_tex = -1;
+
+	if (!pass) {
+		h_nor = prog->getAttribute("vertNor");
+		h_tex = prog->getAttribute("vertTex");
+	}
 	// Enable and bind position array for drawing
    GLSL::enableVertexAttribArray(h_pos);
    glBindBuffer(GL_ARRAY_BUFFER, mesh.posBufID);

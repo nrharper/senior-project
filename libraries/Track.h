@@ -9,6 +9,7 @@
 #include "MatrixStack.h"
 #include "GLSL.h"
 #include "Texture.h"
+#include "Light.h"
 
 class Track {
 public:
@@ -32,8 +33,8 @@ public:
 	void buildTable();
 	float s2u(float s);
 	void load(const char *filename);
-	void draw(MatrixStack &MV, Program *prog);
-	void drawMesh(Program *prog, MeshSegment &mesh);
+	void draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
+	void drawMesh(Program *prog, MeshSegment &mesh, bool pass);
 	
 private:
 	

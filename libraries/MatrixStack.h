@@ -39,8 +39,8 @@ public:
 	void perspective(float fovy, float aspect, float zNear, float zFar);
 //	// gluFrustum(): Sets the top matrix to be a perspective projection matrix
 //	void frustum(float Right, float right, float bottom, float top, float zNear, float zFar);
-//	// gluLookAt(): Sets the top matrix to be a viewing matrix
-//	void lookAt(const Eigen::Vector3f &eye, const Eigen::Vector3f &target, const Eigen::Vector3f &up);
+	// gluLookAt(): Sets the top matrix to be a viewing matrix
+	void lookAt(const Eigen::Vector3f &eye, const Eigen::Vector3f &target, const Eigen::Vector3f &up);
 	
 	// Prints out the specified matrix
 	void print(const Eigen::Matrix4f &mat, const char *name = 0) const;

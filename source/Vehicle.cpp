@@ -1,4 +1,5 @@
 #include "../libraries/Vehicle.h"
+#include "../libraries/Shape.h"
 #include <iostream>
 
 using namespace std;
@@ -28,27 +29,56 @@ Vehicle::~Vehicle()
 void Vehicle::load() {
 	chasis_shape.load("../materials/cube.obj");
 	wheel_shape.load("../materials/tire.obj");
+	ctex.setFilename("../materials/concrete.bmp");
+	wtex.setFilename("../materials/concrete.bmp");
 
-	wheel.setShape(&wheel_shape);
-	Eigen::Matrix4f R = Eigen::Matrix4f::Identity();
-	R.block<3,3>(0,0) = Eigen::AngleAxisf((float)M_PI / 2, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix();
-	Eigen::Matrix4f S = Eigen::Matrix4f::Identity();
-	S(0,0) = 0.75f;
-	S(1,1) = 0.75f;
-	S(2,2) = 0.25f;
-	wheel.setTransform(R * S);
+	WorldObject wheel0;
+	wheel0.setShape(&wheel_shape);
+	wheel0.setTexture(&wtex);
+	wheel0.setTranslate(Eigen::Vector3f(-0.5f, 0.25f, -0.8f));
+	wheel0.setScale(Eigen::Vector3f(0.75f, 0.75f, 0.25f));
+	wheel0.setRotate(Eigen::AngleAxisf((float)M_PI / 2, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix());
+	wheels.push_back(wheel0);
+
+	WorldObject wheel1;
+	wheel1.setShape(&wheel_shape);
+	wheel1.setTexture(&wtex);
+	wheel1.setTranslate(Eigen::Vector3f(0.5f, 0.25f, -0.8f));
+	wheel1.setScale(Eigen::Vector3f(0.75f, 0.75f, 0.25f));
+	wheel1.setRotate(Eigen::AngleAxisf((float)M_PI / 2, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix());
+	wheels.push_back(wheel1);
+
+	WorldObject wheel2;
+	wheel2.setShape(&wheel_shape);
+	wheel2.setTexture(&wtex);
+	wheel2.setTranslate(Eigen::Vector3f(-0.5f, 0.25f, 0.8f));
+	wheel2.setScale(Eigen::Vector3f(0.75f, 0.75f, 0.25f));
+	wheel2.setRotate(Eigen::AngleAxisf((float)M_PI / 2, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix());
+	wheels.push_back(wheel2);
+
+	WorldObject wheel3;
+	wheel3.setShape(&wheel_shape);
+	wheel3.setTexture(&wtex);
+	wheel3.setTranslate(Eigen::Vector3f(0.5f, 0.25f, 0.8f));
+	wheel3.setScale(Eigen::Vector3f(0.75f, 0.75f, 0.25f));
+	wheel3.setRotate(Eigen::AngleAxisf((float)M_PI / 2, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix());
+	wheels.push_back(wheel3);
 
 	chasis.setShape(&chasis_shape);
-	S = Eigen::Matrix4f::Identity();
-	S(1,1) = 0.4f;
-	chasis.setTransform(S);
-
+	chasis.setTexture(&ctex);
+	chasis.setTranslate(Eigen::Vector3f(0.0f, 0.25f, 0.0f));
+	chasis.setScale(Eigen::Vector3f(1.0f, 0.4f, 1.0f));
+	chasis.setRotate(Eigen::AngleAxisf(0.0f, Eigen::Vector3f(0.0f, 1.0f, 0.0f)).toRotationMatrix());
 	computeMomentsOfInertia();
 }
 
 void Vehicle::init() {
 	chasis_shape.init();
 	wheel_shape.init();
+	for (auto &wheel : wheels) {
+		wheel.initPQP();
+	}
+	chasis.initPQP();
 }
 
 bool checkCollisions(Eigen::Vector3f pos, float yaw, const std::vector<CollisionBox> &boxes) {
@@ -75,7 +105,7 @@ void Vehicle::computeMomentsOfInertia() {
 	momenty = mass * (2.0f * 2.0f + 2.0f * 2.0f) / 12.0f;
 }
 
-void Vehicle::computeForces(const bool *keys) {
+void Vehicle::computeForces(const bool *keys, float dt) {
 	Eigen::Vector3f a, f, Fd, Fr, u;
 	Eigen::Vector3f Fa(0.0f, 0.0f, 0.0f);
 	u(0) = sin(steerAngle);
@@ -96,8 +126,8 @@ void Vehicle::computeForces(const bool *keys) {
 	f = Fa + Fd + Fr;
 	
 	force = 2.0f * f;
-
 	torque = Eigen::Vector3f(0.5f, 0.0f, -0.5f).cross(f) + Eigen::Vector3f(-0.5f, 0.0f, -0.5f).cross(f);
+	//cout << torque(0) << " " << torque(1) << " " << torque(2) << endl;
 }
 
 void Vehicle::update(const bool *keys, const Eigen::Vector2f &mouse, const std::vector<CollisionBox> &boxes, float dt) {
@@ -113,7 +143,7 @@ void Vehicle::update(const bool *keys, const Eigen::Vector2f &mouse, const std::
 	else
 		steerAngle = 0.5f * steerAngle; 
 
-	computeForces(keys);
+	computeForces(keys, dt);
 
 	Eigen::Vector3f acceleration = force / mass;
 	velocity += acceleration * dt;
@@ -130,50 +160,31 @@ void Vehicle::update(const bool *keys, const Eigen::Vector2f &mouse, const std::
 	pitch += pitchVelocity * dt;
 
 	// Update to new orientation if no collision
-   if (!checkCollisions(pos, vehicleAngle, boxes)) {
+   //if (!checkCollisions(pos, vehicleAngle, boxes)) {
       position = Eigen::Vector3f(pos(0), pos(1), pos(2));
 		//yaw = vehicleAngle;
-   }
-   else {
-      velocity << 0.0f, 0.0f, 0.0f;
-      yawVelocity = 0.0f;
-	}
+   //}
+//   else {
+//      velocity << 0.0f, 0.0f, 0.0f;
+//      yawVelocity = 0.0f;
+//	}
 }
 
-void Vehicle::draw(const bool *keys, MatrixStack &MV, Program *prog) {
-	if (abs(speed) > 0)
-      tireSpin -= speed;
+void Vehicle::draw(const bool *keys, MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) {
+	if (abs(speed) > 0) tireSpin -= speed;
 
 	// Transform and draw
 	MV.pushMatrix();
-      MV.translate(position);
-      MV.translate(Eigen::Vector3f(0.0f, -1.0f, 0.0f));
-      MV.rotate(yaw, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
-      MV.pushMatrix(); // front left tire
-         MV.translate(Eigen::Vector3f(-0.5f, 0.25f, -0.8f));
-         MV.rotate(steerAngle, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
-         MV.rotate(tireSpin, Eigen::Vector3f(1.0f, 0.0f, 0.0f));
-         wheel.draw(MV, prog);
-      MV.popMatrix();
-      MV.pushMatrix(); // front right tire
-         MV.translate(Eigen::Vector3f(0.5f, 0.25f, -0.8f));
-         MV.rotate(steerAngle, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
-         MV.rotate(tireSpin, Eigen::Vector3f(1.0f, 0.0f, 0.0f));
-         wheel.draw(MV, prog);
-      MV.popMatrix();
-      MV.pushMatrix(); // rear left tire
-         MV.translate(Eigen::Vector3f(-0.5f, 0.25f, 0.8f));
-         MV.rotate(tireSpin, Eigen::Vector3f(1.0f, 0.0f, 0.0f));
-         wheel.draw(MV, prog);
-      MV.popMatrix();
-      MV.pushMatrix(); // rear right tire
-         MV.translate(Eigen::Vector3f(0.5f, 0.25f, 0.8f));
-         MV.rotate(tireSpin, Eigen::Vector3f(1.0f, 0.0f, 0.0f));
-         wheel.draw(MV, prog);
-      MV.popMatrix();
-      MV.pushMatrix(); // chasis
-         MV.translate(Eigen::Vector3f(0.0f, 0.25f, 0.0f));
-	      chasis.draw(MV, prog);
-      MV.popMatrix();
-   MV.popMatrix();
+		MV.translate(position);
+		MV.translate(Eigen::Vector3f(0.0f, -1.0f, 0.0f));
+		MV.rotate(yaw, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
+		MV.pushMatrix(); // front left tire
+			MV.rotate(steerAngle, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
+			MV.rotate(tireSpin, Eigen::Vector3f(1.0f, 0.0f, 0.0f));
+			for (auto &wheel : wheels) {
+         		wheel.draw(MV, P, prog, light, isShadowPass1);
+			}
+		MV.popMatrix();
+		chasis.draw(MV, P, prog, light, isShadowPass1);
+	MV.popMatrix();
 }

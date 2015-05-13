@@ -1,1 +1,1 @@
-/home/noah/sproject/build/CMakeFiles/senior.dir
+/home/noah/senior-project/build/CMakeFiles/senior.dir

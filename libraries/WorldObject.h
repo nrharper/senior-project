@@ -14,25 +14,37 @@
 #include "MatrixStack.h"
 #include "Shape.h"
 #include "Program.h"
+#include "../libraries/Light.h"
+#include "PQP.h"
+#include "../libraries/Texture.h"
 
 class WorldObject {
 public:
 	WorldObject();
 	virtual ~WorldObject();
 
+	Eigen::Vector3f translate;
+	Eigen::Matrix3f rotate;
+	PQP_Model *pqpshape;
+
 	void init(void);
-	void draw(MatrixStack &MV, Program *prog) const;
+	void draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const;
 	void buildTexMatrix(float, float);
 	Eigen::Matrix3f &getTexMatrix() { return texMat; }
 	void setShape(Shape *s) { shape = s; }
+	void setTexture(Texture *t) { texture = t; }
 	Shape* getShape() { return shape; }
-	void setTransform(Eigen::Matrix4f t) { transform = t; }
+	void setScale(Eigen::Vector3f s) { scale = s; }
+	void setTranslate(Eigen::Vector3f t) { translate = t; }
+	void setRotate(Eigen::Matrix3f r) { rotate = r; }
+	void initPQP();
 
 private:
 	Eigen::Matrix3f texMat;
 	Eigen::Vector3f diffuse;
 	Shape *shape;
-	Eigen::Matrix4f transform;
+	Eigen::Vector3f scale;
+	Texture *texture;
 };
 
 #endif

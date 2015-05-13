@@ -18,6 +18,7 @@ public:
 	void load(const std::string &meshName);
 	void init();
 	void draw(GLint h_pos, GLint h_nor, GLint h_tex);
+	tinyobj::shape_t getShape() { return shapes[0]; }
 	
 private:
 	std::vector<tinyobj::shape_t> shapes;
