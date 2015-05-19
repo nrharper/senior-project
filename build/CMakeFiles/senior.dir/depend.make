@@ -1091,6 +1091,7 @@ CMakeFiles/senior.dir/source/Scene.cpp.o: /home/noah/Tools/pqp-1.3/PQP_v1.3/src/
 CMakeFiles/senior.dir/source/Scene.cpp.o: /home/noah/Tools/pqp-1.3/PQP_v1.3/src/PQP_Compile.h
 CMakeFiles/senior.dir/source/Scene.cpp.o: /home/noah/Tools/pqp-1.3/PQP_v1.3/src/PQP_Internal.h
 CMakeFiles/senior.dir/source/Scene.cpp.o: /home/noah/Tools/pqp-1.3/PQP_v1.3/src/Tri.h
+CMakeFiles/senior.dir/source/Scene.cpp.o: ../libraries/Camera.h
 CMakeFiles/senior.dir/source/Scene.cpp.o: ../libraries/CollisionBox.h
 CMakeFiles/senior.dir/source/Scene.cpp.o: ../libraries/GLSL.h
 CMakeFiles/senior.dir/source/Scene.cpp.o: ../libraries/Light.h

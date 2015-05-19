@@ -64,10 +64,10 @@ void main()
 	shadowCoords.xyz = 0.5 * shadowCoords.xyz + 0.5;
 	
 	// Sample the shadow map N times
-	float bias = 0.0000001;
-	//float bias = 0.00005 * tan(acos(dot(n, l)));
+	float bias = 0.00000001;
+	//float bias = 0.0000001 * tan(acos(dot(n, l)));
 	//bias = clamp(bias, 0.0, 0.01);
-	float blur = 0.001;
+	float blur = 0.0005;
 	float visibility = 1.0;
 	if(shadowCoords.w > 0.0 &&
 	   shadowCoords.x > 0.0 && shadowCoords.x < 1.0 &&
@@ -79,11 +79,13 @@ void main()
 			// (Note: distToLight we computed for Blinn-Phong is in camera space.)
 			float distToLightStored = texture2D(shadowMap, shadowCoords.xy + poissonDisk[i]*blur).z;
 			if(distToLightStored < shadowCoords.z + bias) {
-				visibility -= 0.20;
+				visibility -= 0.125;
 			}
 		}
 	}
 	
 	// Final color
-	gl_FragColor.rgb = ambient + visibility * (diffuse + specular);
+	vec3 color = ambient + visibility * (diffuse + specular);
+	float fog = 1.0 - clamp((400 - fragPos.z) / (400 - 100), 0.0, 1.0);
+	gl_FragColor.rgb = (1.0 - fog) * color + fog * vec3(0.5, 0.5, 0.5);
 }

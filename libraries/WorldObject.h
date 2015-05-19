@@ -28,7 +28,7 @@ public:
 	PQP_Model *pqpshape;
 
 	void init(void);
-	void draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const;
+	void draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const;
 	void buildTexMatrix(float, float);
 	Eigen::Matrix3f &getTexMatrix() { return texMat; }
 	void setShape(Shape *s) { shape = s; }

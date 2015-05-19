@@ -4,7 +4,7 @@
 
 Light::Light() :
 	aspect(1.0f),
-	fovy(90.0f/180.0f*M_PI),
+	fovy(20.0f/180.0f*M_PI),
 	znear(1.0f),
 	zfar(1300.0f),
 	position(500.0f, 500.0f, 500.0f),
@@ -25,5 +25,5 @@ void Light::applyProjectionMatrix(MatrixStack *P) const
 
 void Light::applyViewMatrix(MatrixStack *MV) const
 {
-	MV->lookAt(position, target, up);	
+	MV->lookAt(position, target, up);
 }

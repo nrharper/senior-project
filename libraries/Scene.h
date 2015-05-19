@@ -14,16 +14,20 @@
 #include "Vehicle.h"
 #include "../libraries/Light.h"
 #include "PQP.h"
+#include "Camera.h"
 
 class Scene {
 public:
+	Scene();
 	virtual ~Scene();
 
 	void load(const char *filename);
-	void draw(const bool *keys, MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
+	void bindCamera(Camera *c) { camera = c; }
+	void draw(const bool *keys, Program *prog, bool isShadowPass1);
 	void init();
 	void update(const bool *keys, const Eigen::Vector2f &mouse, float dt);
 	void checkCollisions();
+	Light &getLight() { return light; }
 	Vehicle &getVehicle() { return vehicle; }
 	std::vector<CollisionBox> &getCollisionBoxes() { return boxes; }
 	
@@ -36,6 +40,8 @@ private:
 	std::vector<int> shapespertex;
 	Track track;
 	Vehicle vehicle;
+	Light light;
+	Camera *camera;
 
 	void pqpCollideWObj(WorldObject &wheel, WorldObject &wobj);
 	void pqpCollideTrack(WorldObject &wheel, PQP_Model *track);

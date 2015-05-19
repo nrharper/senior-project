@@ -16,6 +16,7 @@ class Vehicle {
 public:
 
 	std::vector<WorldObject> wheels;
+	std::vector<Eigen::Vector3f> wforces;
 	WorldObject chasis;
 
 	Vehicle();
@@ -25,7 +26,7 @@ public:
 	void computeMomentsOfInertia();
 	void computeForces(const bool *keys, float dt);
 	void update(const bool *keys, const Eigen::Vector2f &mouse, const std::vector<CollisionBox> &boxes, float dt);
-	void draw(const bool *keys, MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
+	void draw(const bool *keys, MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
 	float &getYaw() { return yaw; }
 	float &getPitch() { return pitch; }
 	float &getVelocity() { return speed; }
@@ -37,14 +38,13 @@ private:
 	float momenty;
 	float yawVelocity;
 	float pitchVelocity;
-	Eigen::Vector3f force;
 	Eigen::Vector3f torque;
+	Eigen::Vector3f force;
 
 	// driving variables
 	float yaw;
 	float pitch;
 	float tireSpin;
-	float vehicleAngle;
 	float speed;
 	float steerAngle;
 	float wheelBase;

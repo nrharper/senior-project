@@ -42,41 +42,45 @@ void WorldObject::initPQP() {
 	pqpshape->EndModel();
 }
 
-void WorldObject::draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const {
-	//float extra = (float)M_PI/8.0f;
+void WorldObject::draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const {
+	Eigen::Matrix4f R = Eigen::Matrix4f::Identity();
+	R.block<3,3>(0,0) = rotate;
+	
+//	Eigen::Matrix4f pcheck = M.topMatrix();
+//	std::cout << pcheck << std::endl;
 
-	MatrixStack lightP, lightMV; // light matrices
+	M.pushMatrix();
+	M.translate(translate);
+	M.multMatrix(R);
+	M.scale(scale);
+
+	MatrixStack lightP, lightV; // light matrices
 	lightP.pushMatrix();
 	light.applyProjectionMatrix(&lightP);
-	lightMV.pushMatrix();
-	light.applyViewMatrix(&lightMV);
-	lightMV.translate(translate);
-	//lightMV.rotate(yaw + extra, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
-	lightMV.scale(scale);
+	lightV.pushMatrix();
+	light.applyViewMatrix(&lightV);
 
-	Eigen::Matrix4f lightMVP = lightP.topMatrix() * lightMV.topMatrix();
+	Eigen::Matrix4f lightMVP = lightP.topMatrix() * lightV.topMatrix() * M.topMatrix();
 
 	if (isShadowPass1) {
 		glUniformMatrix4fv(prog->getUniform("MVP"), 1, GL_FALSE, lightMVP.data());
 		shape->draw(prog->getAttribute("vertPos"), -1, -1);
+		M.popMatrix();
 		return;
 	}
 
-	MV.pushMatrix();
-	MV.translate(translate);
-	//MV.rotate(yaw + extra, Eigen::Vector3f(0.0f, 1.0f, 0.0f));
-	MV.scale(scale);
+	Eigen::Matrix4f MV = V.topMatrix() * M.topMatrix();
 	glUniformMatrix4fv(prog->getUniform("lightMVP"), 1, GL_FALSE, lightMVP.data());
 	glUniform3fv(prog->getUniform("kd"),  1, diffuse.data());
-	glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.topMatrix().data());
+	glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.data());
 	glUniformMatrix3fv(prog->getUniform("Tscale"), 1, GL_TRUE, texMat.data());
 
 	texture->bind(prog->getUniform("texture"), 1);	
 	shape->draw(prog->getAttribute("vertPos"), prog->getAttribute("vertNor"), prog->getAttribute("vertTex"));
 	texture->unbind(1);
 
-	MV.popMatrix();
-	lightMV.popMatrix();
+	M.popMatrix();
+	lightV.popMatrix();
 	lightP.popMatrix();
 }
 

@@ -494,7 +494,7 @@ void Track::draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, b
 	}
 
 	glUniformMatrix4fv(prog->getUniform("lightMVP"), 1, GL_FALSE, lightMVP.data());
-   glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.topMatrix().data());
+	glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.topMatrix().data());
 	Eigen::Matrix3f T1 = Eigen::Matrix3f::Identity();
 	glUniformMatrix3fv(prog->getUniform("Tscale"), 1, GL_TRUE, T1.data());
 

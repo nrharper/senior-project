@@ -7,27 +7,39 @@
 
 using namespace std;
 
+Scene::Scene()
+{
+}
+
 Scene::~Scene()
 {
 	
 }
 
-void Scene::draw(const bool *keys, MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) {
-//	int texnum = 0, lastnum = 0;
-//	for (auto &num : shapespertex) {
-//		textures.at(texnum).bind(prog->getUniform("texture"), 1);
-//		for (int i = lastnum; i < lastnum + num; i++) {
-//			objects.at(i).draw(MV, P, prog, light, isShadowPass1);
-//		}
-//		lastnum += num;
-//		textures.at(texnum).unbind(texnum);
-//		texnum++;
-//	}
-	for (auto &wobj : objects) {
-		wobj.draw(MV, P, prog, light, isShadowPass1);
+void Scene::draw(const bool *keys, Program *prog, bool isShadowPass1) {
+	// Create matrix stacks
+	MatrixStack P, V, M;
+	// Apply camera transforms
+	P.pushMatrix();
+	camera->applyProjectionMatrix(&P);
+	V.pushMatrix();
+	camera->applyViewMatrix(&V);
+
+	// Get light position in Camera space
+	Eigen::Vector4f lightPos = V.topMatrix() * Eigen::Vector4f(light.getPosition()(0), light.getPosition()(1), light.getPosition()(2), 1.0f);
+	if (!isShadowPass1) {
+		glUniform3fv(prog->getUniform("lightPos"), 1, lightPos.data());
+		glUniformMatrix4fv(prog->getUniform("P"), 1, GL_FALSE, P.topMatrix().data());
 	}
-	track.draw(MV, P, prog, light, isShadowPass1);
-	vehicle.draw(keys, MV, P, prog, light, isShadowPass1);
+
+	for (auto &wobj : objects) {
+		wobj.draw(M, V, P, prog, light, isShadowPass1);
+	}
+	track.draw(V, P, prog, light, isShadowPass1);
+	vehicle.draw(keys, M, V, P, prog, light, isShadowPass1);
+
+	P.popMatrix();
+	V.popMatrix();
 }
 
 void Scene::init() {
@@ -44,6 +56,11 @@ void Scene::init() {
 
 void Scene::update(const bool *keys, const Eigen::Vector2f &mouse, float dt) {
 	vehicle.update(keys, mouse, boxes, dt);
+
+	// update the light's target for shadowMapping purposes
+	Eigen::Vector3f u(sin(camera->getYaw()), 0.0f, cos(camera->getYaw()));
+	light.setTarget(camera->getPosition() + 75.0f * -u);
+
 	checkCollisions();
 }
 
@@ -67,8 +84,15 @@ void Scene::pqpCollideWObj(WorldObject &wheel, WorldObject &wobj) {
 	PQP_REAL R2[3][3];
 	PQP_REAL *T2 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
 	
+	float pitch = vehicle.getPitch();
+	float yaw = vehicle.getYaw();
+	Eigen::Vector3f wtraw = wheel.translate;
+	std::cout << sin(pitch) * wtraw(1) << std::endl;
+	Eigen::Vector3f wtrel(cos(pitch) * sin(yaw) * wtraw(0), sin(pitch) * wtraw(1), cos(pitch) * cos(yaw) * wtraw(2));
+
 	setPQPRotate(wheel.rotate.data(), R1);
-	Eigen::Vector3f wp0 = wheel.translate + vehicle.getPosition();
+	Eigen::Vector3f wp0 = wtrel + vehicle.getPosition();
+	wp0(1) -= 0.80f;
 	T1 = (PQP_REAL *)(wp0.data());
 
 	setPQPRotate(wobj.rotate.data(), R2);
@@ -77,7 +101,7 @@ void Scene::pqpCollideWObj(WorldObject &wheel, WorldObject &wobj) {
 	PQP_CollideResult cres;
 	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
 					   R2, T2, wobj.pqpshape,
-		                  PQP_ALL_CONTACTS);
+		                  PQP_FIRST_CONTACT);
 	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
 }
 
@@ -90,15 +114,21 @@ void Scene::pqpCollideTrack(WorldObject &wheel, PQP_Model *track) {
 	R2[1][1] = (PQP_REAL)1.0f;
 	R2[2][2] = (PQP_REAL)1.0f;
 	PQP_REAL T2[3] = {(PQP_REAL)0.0f};
+	
+	float pitch = vehicle.getPitch();
+	float yaw = vehicle.getYaw();
+	Eigen::Vector3f wtraw = wheel.translate;
+	Eigen::Vector3f wtrel(cos(pitch) * sin(yaw) * wtraw(0), sin(pitch) * wtraw(1), cos(pitch) * cos(yaw) * wtraw(2));
 
 	setPQPRotate(wheel.rotate.data(), R1);
-	Eigen::Vector3f wp0 = wheel.translate + vehicle.getPosition();
+	Eigen::Vector3f wp0 = wtrel + vehicle.getPosition();
+	wp0(1) -= 0.90f;
 	T1 = (PQP_REAL *)(wp0.data());
 
 	PQP_CollideResult cres;
 	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
 					   R2, T2, track,
-		                  PQP_ALL_CONTACTS);
+		                  PQP_FIRST_CONTACT);
 	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
 }
 
