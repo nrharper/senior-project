@@ -19,6 +19,7 @@ WorldObject::~WorldObject()
 	
 }
 
+// convert the model into PQP format for use in collision testing
 void WorldObject::initPQP() {
 	pqpshape = new PQP_Model();
 	PQP_REAL p1[3],p2[3],p3[3];
@@ -42,14 +43,12 @@ void WorldObject::initPQP() {
 	pqpshape->EndModel();
 }
 
+// draws the world object
 void WorldObject::draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1) const {
 	Eigen::Matrix4f R = Eigen::Matrix4f::Identity();
 	R.block<3,3>(0,0) = rotate;
-	
-//	Eigen::Matrix4f pcheck = M.topMatrix();
-//	std::cout << pcheck << std::endl;
 
-	M.pushMatrix();
+	M.pushMatrix(); // set transformations
 	M.translate(translate);
 	M.multMatrix(R);
 	M.scale(scale);
@@ -62,7 +61,7 @@ void WorldObject::draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *
 
 	Eigen::Matrix4f lightMVP = lightP.topMatrix() * lightV.topMatrix() * M.topMatrix();
 
-	if (isShadowPass1) {
+	if (isShadowPass1) { // quit early if on depth buffer pass
 		glUniformMatrix4fv(prog->getUniform("MVP"), 1, GL_FALSE, lightMVP.data());
 		shape->draw(prog->getAttribute("vertPos"), -1, -1);
 		M.popMatrix();
@@ -75,7 +74,7 @@ void WorldObject::draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *
 	glUniformMatrix4fv(prog->getUniform("MV"), 1, GL_FALSE, MV.data());
 	glUniformMatrix3fv(prog->getUniform("Tscale"), 1, GL_TRUE, texMat.data());
 
-	texture->bind(prog->getUniform("texture"), 1);	
+	texture->bind(prog->getUniform("texture"), 1);
 	shape->draw(prog->getAttribute("vertPos"), prog->getAttribute("vertNor"), prog->getAttribute("vertTex"));
 	texture->unbind(1);
 
@@ -84,6 +83,7 @@ void WorldObject::draw(MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *
 	lightP.popMatrix();
 }
 
+// builds the UV matrix for texture scaling
 void WorldObject::buildTexMatrix(float scaleX, float scaleY) {
 	texMat = Eigen::Matrix3f::Identity();
 	texMat(0,0) = scaleX / 5;

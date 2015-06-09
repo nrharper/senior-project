@@ -37,14 +37,18 @@ private:
 	std::vector<WorldObject> objects;
 	std::vector<CollisionBox> boxes;
 	std::vector<Texture> textures;
-	std::vector<int> shapespertex;
 	Track track;
 	Vehicle vehicle;
 	Light light;
 	Camera *camera;
+	float dtCurrent;
 
-	void pqpCollideWObj(WorldObject &wheel, WorldObject &wobj);
-	void pqpCollideTrack(WorldObject &wheel, PQP_Model *track);
+	bool colliding[4];
+	Eigen::Vector3f vnew;
+
+	void pqpCollideWObj(WorldObject &wheel, WorldObject &wobj, int w);
+	void pqpCollideTrack(WorldObject &wheel, PQP_Model *track, int w);
+	void handleCollision(int w, float dist);
 };
 
 #endif

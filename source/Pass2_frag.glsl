@@ -46,12 +46,10 @@ void main()
 	float cs = pow(max(0.0, dot(n, h)), 100.0);
 
 	vec3 texColor = texture2D(texture, fragTexCoords).rgb;
-	texColor += kd * 0.1;
 
-	float attenuation = 1.0;// / (1.0 + 0.02 * distToLight + 0.02 * distToLight * distToLight);
-	vec3 ambient = ka * attenuation;
-	vec3 diffuse = cd * texColor * attenuation;
-	vec3 specular = cs * ks * attenuation;
+	vec3 ambient = ka + texColor * 0.2; // Add some texture color to the ambient
+	vec3 diffuse = cd * texColor * 0.8;
+	vec3 specular = cs * ks;
 	
 	//////////////////////////////////////////////////////
 	// Shadowing
@@ -65,9 +63,7 @@ void main()
 	
 	// Sample the shadow map N times
 	float bias = 0.00000001;
-	//float bias = 0.0000001 * tan(acos(dot(n, l)));
-	//bias = clamp(bias, 0.0, 0.01);
-	float blur = 0.0005;
+	float blur = 0.0002;
 	float visibility = 1.0;
 	if(shadowCoords.w > 0.0 &&
 	   shadowCoords.x > 0.0 && shadowCoords.x < 1.0 &&
@@ -86,6 +82,13 @@ void main()
 	
 	// Final color
 	vec3 color = ambient + visibility * (diffuse + specular);
-	float fog = 1.0 - clamp((400 - fragPos.z) / (400 - 100), 0.0, 1.0);
-	gl_FragColor.rgb = (1.0 - fog) * color + fog * vec3(0.5, 0.5, 0.5);
+	vec3 fogColor = vec3(0.55, 0.80, 1.0);
+	
+	// Linear distance fog
+	float len = length(fragPos);
+	float fogFactor = (350 - len) / (350 - 200);
+	fogFactor = clamp(fogFactor, 0.0, 1.0);
+
+	// Blend color with the fog color
+	gl_FragColor.rgb = (1.0 - fogFactor) * fogColor + fogFactor * color;
 }

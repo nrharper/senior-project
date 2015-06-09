@@ -388,8 +388,8 @@ void Track::load(const char *filename) {
 	}
 	in.close();
 
-	toptex.setFilename("../materials/road.jpg");
-	bottomtex.setFilename("../materials/diffuse.bmp");
+	toptex.setFilename("../materials/road_smooth.jpg");
+	bottomtex.setFilename("../materials/concrete_yellow.jpg");
 	buildTable();
 	buildGeometry();
 }
@@ -507,7 +507,7 @@ void Track::draw(MatrixStack &MV, MatrixStack &P, Program *prog, Light &light, b
 	for (auto &mesh : bottomMeshes) {
 		drawMesh(prog, mesh, isShadowPass1);
 	}
-	//drawMesh(prog, collisionMesh, isShadowPass1);
+//	drawMesh(prog, collisionMesh, isShadowPass1);
 	bottomtex.unbind(1);
 
 	lightMV.popMatrix();

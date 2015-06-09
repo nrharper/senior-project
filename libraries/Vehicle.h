@@ -19,6 +19,14 @@ public:
 	std::vector<Eigen::Vector3f> wforces;
 	WorldObject chasis;
 
+	float momentx;
+	float momenty;
+	float momentz;
+
+	float yawVelocity;
+	float pitchVelocity;
+	float rollVelocity;
+
 	Vehicle();
 	virtual ~Vehicle();
 	void load();
@@ -29,28 +37,28 @@ public:
 	void draw(const bool *keys, MatrixStack &M, MatrixStack &V, MatrixStack &P, Program *prog, Light &light, bool isShadowPass1);
 	float &getYaw() { return yaw; }
 	float &getPitch() { return pitch; }
-	float &getVelocity() { return speed; }
+	float &getRoll() { return roll; }
+	Eigen::Vector3f &getVelocity() { return velocity; }
 	Eigen::Vector3f &getPosition() { return position; }
+	float &getMass() { return mass; }
+	void setVelocity(Eigen::Vector3f v) { velocity = v; }
 	
 private:
 	float mass;
-	float momentx;
-	float momenty;
-	float yawVelocity;
-	float pitchVelocity;
 	Eigen::Vector3f torque;
 	Eigen::Vector3f force;
+	Eigen::Vector3f forceT;
 
 	// driving variables
 	float yaw;
 	float pitch;
+	float roll;
 	float tireSpin;
-	float speed;
 	float steerAngle;
-	float wheelBase;
 	Eigen::Vector2f mousePrev;
 	Eigen::Vector3f position;
 	Eigen::Vector3f velocity;
+	Eigen::Vector3f velocityT;
 
 	Shape chasis_shape;
 	Shape wheel_shape;

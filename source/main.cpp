@@ -40,7 +40,10 @@ void initGL()
 	//////////////////////////////////////////////////////
 	
 	// Set background color
-	glClearColor(0.5f, 0.5f, 1.0f, 1.0f);
+	glClearColor(0.55, 0.8, 1.0, 1.0f);
+	glFogi(GL_FOG_COORD_SRC, GL_FOG_COORDINATE);
+	glFogCoordf(600.0f);
+
 	// Enable z-buffer test
 	glEnable(GL_DEPTH_TEST);
 	
@@ -117,6 +120,7 @@ void drawGL()
 	}
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
+	glEnable(GL_MULTISAMPLE);
 
 	// Pass 1: get depth from light source
 	glBindFramebuffer(GL_FRAMEBUFFER, framebufferID);
@@ -133,13 +137,14 @@ void drawGL()
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	glViewport(0, 0, centerWidth * 2, centerHeight * 2);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(0.5, 0.5, 0.5, 1);//gray color, same as fog color
 	glClearDepth(1);
 	glEnable(GL_DEPTH_TEST);
 	glCullFace(GL_BACK);
 	prog_pass2.bind();
-	glUniform3fv(prog_pass2.getUniform("ka"),  1, Eigen::Vector3f(0.3f, 0.3f, 0.3f).data());
-	glUniform3fv(prog_pass2.getUniform("kd"),  1, Eigen::Vector3f(0.8f, 0.7f, 0.7f).data());
+	glEnable(GL_MULTISAMPLE);
+
+	glUniform3fv(prog_pass2.getUniform("ka"),  1, Eigen::Vector3f(0.1f, 0.1f, 0.1f).data());
+	glUniform3fv(prog_pass2.getUniform("kd"),  1, Eigen::Vector3f(0.0f, 0.0f, 0.0f).data());
 	glUniform3fv(prog_pass2.getUniform("ks"), 1, Eigen::Vector3f(1.0f, 0.9f, 0.8f).data());
 
 	glActiveTexture(GL_TEXTURE0);

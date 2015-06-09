@@ -1,10 +1,10 @@
-4
-../materials/cube.obj ../materials/dirt.jpg 1
-0.0 -0.2 0.0
-400.0 0.2 400.0
+3
+../materials/cube.obj ../materials/bricks_smooth.jpg 1
+0.0 -1.05 0.0
+400.0 2.0 400.0
 0.0 0.0 0.0 0.0
 0 x z
-../materials/cube.obj ../materials/brick.jpg 8
+../materials/cube.obj ../materials/metal_cartoon.jpg 8
 200.0 0.0 0.0
 1.0 8.0 400.0
 0.0 0.0 0.0 0.0
@@ -37,7 +37,7 @@
 40.0 60.0 40.0
 0.0 0.0 0.0 0.0
 1 x y
-../materials/sphere.obj ../materials/concrete.bmp 3
+../materials/sphere.obj ../materials/metal_window.png 3
 10.0 8.0 120.0
 20.0 20.0 20.0
 0.0 0.0 0.0 0.0
@@ -50,8 +50,3 @@
 20.0 20.0 20.0
 0.0 0.0 0.0 0.0
 1 x y
-../materials/prism.obj ../materials/concrete.bmp 1
-0.0 0.0 0.0
-10.0 10.0 10.0
-0.0 0.0 0.0 0.0
-0 x y

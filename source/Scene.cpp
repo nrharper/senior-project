@@ -9,6 +9,9 @@ using namespace std;
 
 Scene::Scene()
 {
+	for (int i = 0; i < 4; i++) {
+		colliding[i] = false;
+	}
 }
 
 Scene::~Scene()
@@ -16,6 +19,7 @@ Scene::~Scene()
 	
 }
 
+// Render the scene
 void Scene::draw(const bool *keys, Program *prog, bool isShadowPass1) {
 	// Create matrix stacks
 	MatrixStack P, V, M;
@@ -35,13 +39,14 @@ void Scene::draw(const bool *keys, Program *prog, bool isShadowPass1) {
 	for (auto &wobj : objects) {
 		wobj.draw(M, V, P, prog, light, isShadowPass1);
 	}
-	track.draw(V, P, prog, light, isShadowPass1);
 	vehicle.draw(keys, M, V, P, prog, light, isShadowPass1);
+	track.draw(V, P, prog, light, isShadowPass1);
 
 	P.popMatrix();
 	V.popMatrix();
 }
 
+// Initialize the textures and collision objects
 void Scene::init() {
 	for (int i = 0; i < (int)shapes.size(); i++) {
 		shapes.at(i).init();
@@ -54,14 +59,53 @@ void Scene::init() {
 	}
 }
 
+// Update at the time step
 void Scene::update(const bool *keys, const Eigen::Vector2f &mouse, float dt) {
+	dtCurrent = dt;
 	vehicle.update(keys, mouse, boxes, dt);
+	
+	vnew = vehicle.getVelocity();
+	checkCollisions();
+	vehicle.setVelocity(vnew);
 
 	// update the light's target for shadowMapping purposes
 	Eigen::Vector3f u(sin(camera->getYaw()), 0.0f, cos(camera->getYaw()));
 	light.setTarget(camera->getPosition() + 75.0f * -u);
+}
 
-	checkCollisions();
+// builds a rotation matrix given an angle and the axis to rotate it about
+Eigen::Matrix4f rotateMatrix(float angle, const Eigen::Vector3f &axis) {
+	Eigen::Matrix4f E = Eigen::Matrix4f::Identity();
+	E.block<3,3>(0,0) = Eigen::AngleAxisf(angle, axis).toRotationMatrix();
+	return E;
+}
+
+// Create an impulse for the vehicle on a collision
+void Scene::handleCollision(int w, float dist) {
+	Eigen::Vector3f v = vehicle.getVelocity();
+
+	// Get the vector the represents the part being reflected
+	Eigen::Vector3f nmag(0.0f, 1.0f, 0.0f);
+	float magV = nmag.norm();
+	float vdotn = v.dot(-nmag);
+	Eigen::Vector3f projV(0.0f, 0.0f, 0.0f);
+
+	if (vdotn < 0) {  // Ignore when the normal is pointing in the wrong direction
+		projV = (vdotn / (magV * magV)) * nmag;
+	}
+
+	float vfactor = 0.2f + dist * 7.8f; // proportion of velocity applied (dependent on dist from ground)
+	vnew += projV / vfactor; // update the velocity
+
+	float tvfactor = fmaxf(4.0f, vfactor);  // cap the factor for the torque calculation
+	Eigen::Vector3f f = projV / tvfactor / dtCurrent * vehicle.getMass();
+
+	Eigen::Matrix4f yM = rotateMatrix(vehicle.getYaw(), Eigen::Vector3f(0.0f, 1.0f, 0.0f));
+	Eigen::Matrix4f pM = rotateMatrix(vehicle.getPitch(), Eigen::Vector3f(1.0f, 0.0f, 0.0f));
+	Eigen::Matrix4f rM = rotateMatrix(vehicle.getRoll(), Eigen::Vector3f(0.0f, 0.0f, 1.0f));
+	Eigen::Matrix4f spaceTransform = yM * pM * rM;
+	Eigen::Vector4f ftransformed = spaceTransform * Eigen::Vector4f(f(0), f(1), f(2), 1.0f);
+	vehicle.wforces[w] = ftransformed.head<3>();
 }
 
 // fills a PQP_REAL matrix with values from a float array matrix
@@ -78,66 +122,74 @@ void setPQPRotate(float *raw, PQP_REAL R[3][3]) {
 }
 
 // tests 2 objects for collisions using pqp objects
-void Scene::pqpCollideWObj(WorldObject &wheel, WorldObject &wobj) {
+void Scene::pqpCollideWObj(WorldObject &wheel, WorldObject &wobj, int w) {
 	PQP_REAL R1[3][3];
 	PQP_REAL *T1 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
 	PQP_REAL R2[3][3];
 	PQP_REAL *T2 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
 	
-	float pitch = vehicle.getPitch();
-	float yaw = vehicle.getYaw();
-	Eigen::Vector3f wtraw = wheel.translate;
-	std::cout << sin(pitch) * wtraw(1) << std::endl;
-	Eigen::Vector3f wtrel(cos(pitch) * sin(yaw) * wtraw(0), sin(pitch) * wtraw(1), cos(pitch) * cos(yaw) * wtraw(2));
+	Eigen::Vector3f wtraw = wheel.translate; // Compute the rotation of the wheel
+	Eigen::Matrix4f yM = rotateMatrix(vehicle.getYaw(), Eigen::Vector3f(0.0f, 1.0f, 0.0f));
+	Eigen::Matrix4f pM = rotateMatrix(vehicle.getPitch(), Eigen::Vector3f(1.0f, 0.0f, 0.0f));
+	Eigen::Matrix4f rM = rotateMatrix(vehicle.getRoll(), Eigen::Vector3f(0.0f, 0.0f, 1.0f));
+	Eigen::Vector4f wtrel =  yM * pM * rM * Eigen::Vector4f(wtraw(0), wtraw(1), wtraw(2), 1.0f);
 
 	setPQPRotate(wheel.rotate.data(), R1);
-	Eigen::Vector3f wp0 = wtrel + vehicle.getPosition();
-	wp0(1) -= 0.80f;
+	Eigen::Vector3f wp0 = wtrel.head<3>() + vehicle.getPosition();
+	wp0(1) -= 1.00f;
 	T1 = (PQP_REAL *)(wp0.data());
 
 	setPQPRotate(wobj.rotate.data(), R2);
 	T2 = (PQP_REAL *)(wobj.translate.data());
 
-	PQP_CollideResult cres;
-	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
-					   R2, T2, wobj.pqpshape,
-		                  PQP_FIRST_CONTACT);
-	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
+	PQP_DistanceResult dres;
+	PQP_Distance(&dres, R1, T1, wheel.pqpshape,
+					    R2, T2, wobj.pqpshape,
+		                  0.0, 0.0);
+	if (abs(dres.Distance()) < 1.0) {
+		handleCollision(w, dres.Distance());
+	}
 }
 
 // tests collisions between an object and a track
-void Scene::pqpCollideTrack(WorldObject &wheel, PQP_Model *track) {
+void Scene::pqpCollideTrack(WorldObject &wheel, PQP_Model *track, int w) {
 	PQP_REAL R1[3][3];
 	PQP_REAL *T1 = (PQP_REAL *)malloc(3 * sizeof(PQP_REAL));
 	PQP_REAL R2[3][3] = {{(PQP_REAL)0.0f}};
-	R2[0][0] = (PQP_REAL)1.0f;
+	R2[0][0] = (PQP_REAL)1.0f;  // Rotation of the track is the identity
 	R2[1][1] = (PQP_REAL)1.0f;
 	R2[2][2] = (PQP_REAL)1.0f;
-	PQP_REAL T2[3] = {(PQP_REAL)0.0f};
-	
-	float pitch = vehicle.getPitch();
-	float yaw = vehicle.getYaw();
-	Eigen::Vector3f wtraw = wheel.translate;
-	Eigen::Vector3f wtrel(cos(pitch) * sin(yaw) * wtraw(0), sin(pitch) * wtraw(1), cos(pitch) * cos(yaw) * wtraw(2));
+	PQP_REAL T2[3] = {(PQP_REAL)0.0f}; // Translate of the track is a 0 vector
+
+	Eigen::Vector3f wtraw = wheel.translate;  // Compute the rotation of the wheel
+	Eigen::Matrix4f yM = rotateMatrix(vehicle.getYaw(), Eigen::Vector3f(0.0f, 1.0f, 0.0f));
+	Eigen::Matrix4f pM = rotateMatrix(vehicle.getPitch(), Eigen::Vector3f(1.0f, 0.0f, 0.0f));
+	Eigen::Matrix4f rM = rotateMatrix(vehicle.getRoll(), Eigen::Vector3f(0.0f, 0.0f, 1.0f));
+	Eigen::Vector4f wtrel =  yM * pM * rM * Eigen::Vector4f(wtraw(0), wtraw(1), wtraw(2), 1.0f);
 
 	setPQPRotate(wheel.rotate.data(), R1);
-	Eigen::Vector3f wp0 = wtrel + vehicle.getPosition();
-	wp0(1) -= 0.90f;
+	Eigen::Vector3f wp0 = wtrel.head<3>() + vehicle.getPosition();
+	wp0(1) -= 1.00f;
 	T1 = (PQP_REAL *)(wp0.data());
 
-	PQP_CollideResult cres;
-	PQP_Collide(&cres, R1, T1, wheel.pqpshape,
-					   R2, T2, track,
-		                  PQP_FIRST_CONTACT);
-	if (cres.Colliding()) printf("Collisions: %d\n", cres.NumPairs());
+	PQP_DistanceResult dres;
+	PQP_Distance(&dres, R1, T1, wheel.pqpshape,
+					    R2, T2, track,
+		                  0.0, 0.0);
+	if (abs(dres.Distance()) < 1.0f) {
+		handleCollision(w, dres.Distance());
+	}
 }
 
-void Scene::checkCollisions() {
-	for (auto &w : vehicle.wheels) {
-		for (auto &wobj : objects) {
-			pqpCollideWObj(w, wobj);
+void Scene::checkCollisions() { // check against the track, if no collisions, check against objects
+	for (unsigned int i = 0; i < 4; i++) {
+		pqpCollideTrack(vehicle.wheels[i], track.pqpshape, i);
+		if (colliding[i] == false) {
+			for (auto &wobj : objects) {
+				pqpCollideWObj(vehicle.wheels[i], wobj, i);
+			}
 		}
-		pqpCollideTrack(w, track.pqpshape);
+		colliding[i] = false;
 	}
 }
 
@@ -154,7 +206,6 @@ void Scene::load(const char *filename) {
 	in >> numShapes;
 	shapes.resize(numShapes);
 	textures.resize(numShapes);
-	shapespertex.resize(numShapes);
 
 	string line;
 	getline(in, line);
@@ -187,7 +238,6 @@ void Scene::load(const char *filename) {
 		tex.setFilename(texfile);
 		textures.at(currentShape) = tex;
 		shapes.at(currentShape) = tempShape;
-		//shapespertex.at(currentShape) = numObjs;
 
 		// get transformations of each object
 		for (int i = 0; i < numObjs; i++) {

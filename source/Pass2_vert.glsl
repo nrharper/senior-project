@@ -15,7 +15,7 @@ varying vec4 shadowClip;
 
 void main()
 {
-   fragTexCoords = (vec3(vertTex, 1.0) * Tscale).xy;
+	fragTexCoords = (vec3(vertTex, 1.0) * Tscale).xy;
 	// vertex position in camera space
 	vec4 vertPos_cam = MV * vertPos;
 	fragPos = vertPos_cam.xyz;

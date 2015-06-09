@@ -11,7 +11,7 @@ Camera::Camera() :
 	aspect(1.0f),
 	fovy(30.0f/180.0f*M_PI),
 	znear(0.1f),
-	zfar(600.0f),
+	zfar(350.0f),
 	yawRotation((float)M_PI),
 	pitchRotation(0.0f),
 	velocity(0.0f),
@@ -34,7 +34,7 @@ void Camera::update(float yaw, float pitch, Eigen::Vector3f pos)
 {
 	float alpha = 0.5f;
 	yawRotation = yawRotation * alpha + (1 - alpha) * yaw;
-	pitchRotation = pitch;
+	pitchRotation = pitchRotation * alpha + (1 - alpha) * pitch;
 	position = pos;
 }
 
